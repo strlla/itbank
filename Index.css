@@ -21,8 +21,6 @@ header{
 }
 .NavBarTitle{
     width: 50%;
-
-
 }
 .navBarLogin{
     width: 50%;
@@ -40,14 +38,11 @@ header{
     left: 17px;
     right: 16px;
     top: calc(50% - 25px/2 + 0.5px);
-    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
     font-size: 22px;
     line-height: 134.77%;
-    /* identical to box height, or 24px */
-    
     display: flex;
     align-items: center;
     text-align: center;
@@ -55,16 +50,14 @@ header{
     color: #ffff;
     
 }
-.navBarLogin p:hover{
-    font-weight: 900;
-}
+
 .navBarLogin button{
-    height: 87px;
+    width: 200px;
+    height: 80px;
     color: #ffff;
     font-weight: 500;
     font-size: 22px;
     font-family: 'roboto';
-    width: 215px;
     background: #000000;
     border-radius: 5px;
 }
@@ -102,6 +95,16 @@ header{
     align-content: center;
     flex-wrap: wrap;
     justify-content: flex-start;
+    margin-top: 5rem;
+    font-size: 30px;
+}
+.novedadestext h3 {
+  
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 55px;
 }
 .novedadesBoxContainer{
     width: 60%;
@@ -117,8 +120,8 @@ header{
     display: flex;
     align-items: center;
     margin: 0.4rem;
-    width: 80%;
-    height: 80%;
+    width: 670px;
+    height: 480px;
     background-color: #ffff;
     border: 1px #000000 solid;
 }
