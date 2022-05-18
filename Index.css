@@ -23,15 +23,7 @@ header{
     justify-content: space-between;
     align-items: center;
 }
-<<<<<<< HEAD
-.NavBarTitle{
-    width: 50%;
-=======
 
-.navBarTitle{
-
->>>>>>> 57f47d12346afb8debfab0e896a7e9752e694a9e
-}
 
 .navBarLogin{
     height: 50px;
@@ -44,13 +36,6 @@ header{
 }
 
 .navBarLogin p{
-<<<<<<< HEAD
-    height: 25px;
-    left: 17px;
-    right: 16px;
-    top: calc(50% - 25px/2 + 0.5px);
-=======
->>>>>>> 57f47d12346afb8debfab0e896a7e9752e694a9e
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
@@ -62,8 +47,6 @@ header{
     color: #ffff;
 }
 
-<<<<<<< HEAD
-=======
 .navBarLogin p{
     font-weight: 600;
     cursor: pointer;
@@ -73,7 +56,6 @@ header{
     text-decoration: underline;
 }
 
->>>>>>> 57f47d12346afb8debfab0e896a7e9752e694a9e
 .navBarLogin button{
     width: 200px;
     height: 80px;
