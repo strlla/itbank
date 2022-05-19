@@ -61,11 +61,12 @@ header{
 
 .navBarLoginButon{
     height: 400px;
+}
 
 .navBarLogin button{
     width: 200px;
     height: 80px;
-
+}
 
 .navBarLogin button:hover{
     cursor: pointer;
