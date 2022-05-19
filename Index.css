@@ -180,14 +180,14 @@ header{
 /* COLOR DE FONFO: #AB9DFF */
 
 html, body{
-    margin: 0;
+    margin: 10;
     padding: 0;
-    background-color: #AB9DFF; /* VER ESTO */
+    background-color: #AB9DFF;
 }
 
 .productos{
-    background-color: #AB9DFF;
     flex-wrap: wrap;
+    padding: 0px 0px 100px 0px;
 }
 
 body{
