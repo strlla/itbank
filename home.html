@@ -4,9 +4,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./Index.css" />
@@ -16,9 +16,41 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <title>Home</title>
+    <title>Home - ITBANK</title>
   </head>
   <body>
+    <!-- HEADER -->
+    <!-- FIN HEADER -->
+    <section class="bienvenidaContainer">
+      <h2>Bienvenido/a NOMBRE CLIENTE !</h2>
+    </section>
+    <main class="mainContainer">
+      <div class="mainContent">
+        <div class="mainContentCol1 opcionesContainer">
+          <div class="opcionesHeader">
+            <button class="opcionesButton active">Cuentas</button>
+            <button class="opcionesButton">Tarjetas</button>
+            <button class="opcionesButton">Inversiones</button>
+            <button class="opcionesButton">Prestamos</button>
+          </div>
+          <div class="opcionesMain">
+            <div class="opciones">Caja de ahorro $xxxx</div>
+            <div class="opciones">Cuenta corriente $xxxx</div>
+            <div class="opciones">Caja de ahorro U$D xxxx</div>  
+          </div>
+        </div>
+        <div class="mainContentCol2">
+          <ul>
+            <li><a href="#">Transferencias</a></li>
+            <li><a href="#">Extractos</a></li>
+            <li><a href="#">Límites</a></li>
+            <li><a href="#">Turnos</a></li>
+            <li><a href="#">Operaciones internacionales</a></li>
+            <li><a href="#">Más operaciones</a></li>
+          </ul>
+        </div>
+      </div>
+    </main>
     <div class = "containerPromocion">
         <div class = "promocionFoto">
             <img src="./images/transfer.jpg">
@@ -46,5 +78,10 @@
         </div>
     </div>
 
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
