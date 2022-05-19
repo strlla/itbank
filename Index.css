@@ -24,9 +24,6 @@ header{
     align-items: center;
 }
 
-.navBarTitle{
-
-}
 
 .navBarLogin{
     height: 50px;
@@ -60,12 +57,12 @@ header{
 }
 
 .navBarLogin button{
-    height: 87px;
+    width: 200px;
+    height: 80px;
     color: #ffff;
     font-weight: 500;
     font-size: 22px;
     font-family: 'roboto';
-    width: 215px;
     background: #000000;
     border-radius: 5px;
 }
@@ -106,6 +103,16 @@ header{
     align-content: center;
     flex-wrap: wrap;
     justify-content: flex-start;
+    margin-top: 5rem;
+    font-size: 30px;
+}
+.novedadestext h3 {
+  
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 55px;
 }
 .novedadesBoxContainer{
     width: 60%;
@@ -121,11 +128,31 @@ header{
     display: flex;
     align-items: center;
     margin: 0.4rem;
-    width: 80%;
-    height: 80%;
+    width: 670px;
+    height: 480px;
     background-color: #ffff;
     border: 1px #000000 solid;
 }
+
+
+.novedadestext button{
+    width: 200px;
+    height: 60px;
+    background-color: #000000;
+    color: #ffff;
+    font-weight: 500;
+    font-family: 'roboto';
+    margin-top: inherit;
+    border-radius: 5px;
+}
+.novedadestext button:hover{
+    border: solid #ffffff 1px;
+    cursor: pointer;
+    background-color: #6750fe;
+    
+}
+
+
 
 /* HOME */
 
@@ -148,7 +175,7 @@ header{
     padding: 2rem;
 }
 
-.promocionTexto{;
+.promocionTexto{
     grid-row: 1/1; 
     grid-column: 7/12;  
     padding: 30px 30px 50px 50px;
@@ -238,5 +265,3 @@ header{
         margin:0 auto;
    }
 }   
-
-
