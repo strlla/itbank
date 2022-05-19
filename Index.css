@@ -295,6 +295,10 @@ body{
     font-weight: 0;
 }
 
+.productos{
+    padding-bottom: 10px;
+}
+
 .container{
     width: 100%;
     max-width: 1200px;
