@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITBANK</title>
 </head>
@@ -19,68 +20,249 @@
             </div>
             
             <div class="navBarLogin">
-                <p>Hacete Cliente</p>
-                <button> Log In </button>
+                <a href="registration.php" class="btn btn-primary">Hacete cliente</a>
+                <a href="login.php" class="btn btn-primary">Iniciar Sesion</a>
+                <a href="promociones.html" class="btn btn-primary">Promociones</a>
+                <a href="novedades.html" class="btn btn-primary">Novedades</a>               
             </div>
-            
+
         </nav>
 
 </header>
 <body>
-    <div class="novedades">
-        <div class="novedadestext mb-4 container-sm ">
-            <div class="novedadesTitle"> 
-              <h2  >Promociones / </h2>
-              <h2>Novedades</h2>
-          </div>
-            <p > Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quod eius sequi doloribus, exercitationem ea assumenda illo aperiam officia, quasi, eum itaque numquam ullam ab iure odio atque quisquam aspernatur!</p
-  
-          <button>Solicitalo Ahora!</button>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
-        <div class="novedadesBoxContainer">  
-            <div class="novedadesBox">
-
-            </div>
-
-        </div>
-    </div>
     <!-- Nuestros productos vista -->
 
-    <h1 class="title"> Nuestros productos </h1>
-
-    <h2 class="subtitle">“ ITBANK... el significado de la modernidad ”</h2>
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/ejemplo-slider3.png" class="d-block w-100 h-10">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
     
-    <div class="container">
-        
-        <div class="card">
-            <img src="Imagenes-productos/cuentas.jpg">
-            <h4>Cuentas</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <a href="#">Conocé más</a>
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <h1 style="color:black;">EJEMPLO TITULO.</h1>
+                <p>TEXTO REPRESENTATIVO DE IMAGEN.</p>
+                <p><a class="btn btn-lg btn-primary" href="registration.php">Hacete Cliente</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/ejemplo-slider.png" class="d-block w-100 h-10">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+    
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>EJEMPLO TITULO 2.</h1>
+                <p>TEXTO REPRESENTATIVO DE IMAGEN 2.</p>
+                <p><a class="btn btn-lg btn-primary" href="promociones.html">Promociones</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/ejemplo-slider2.png" class="d-block w-100 h-10">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+    
+            <div class="container">
+              <div class="carousel-caption text-end">
+                <h1 style="color:black;">EJEMPLO TITULO 3.</h1>
+                <p>TEXTO REPRESENTATIVO DE IMAGEN 3.</p>
+                <p><a class="btn btn-lg btn-primary" href="novedades.html">Novedades</a></p>
+              </div>
+            </div>
+          </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
 
-        <div class="card">
-            <img src="Imagenes-productos/tarjeta.jpg">
-            <h4>Tarjetas</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <a href="#">Conocé más</a>
+<div class="row d-flex justify-content-center text-center">
+    <h1 class="title">Informacion sobre Nuestros productos</h1>
+    <div class=".container-fluid">
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Tarjetas
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder.</div>
+          </div>
         </div>
-
-        <div class="card">
-            <img src="Imagenes-productos/promociones.jpg">
-            <h4>Promociones</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <a href="#">Conocé más</a>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Cuentas
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder.</div>
+          </div>
         </div>
-
-        <div class="card">
-            <img src="Imagenes-productos/inversiones.jpg">
-            <h4>Inversiones</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <a href="#">Conocé más</a>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Inversiones
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder.</div>
+          </div>
         </div>
-
+      </div>
     </div>
-    
+</div>
 </body>
+
+    <!-- Footer -->
+    <footer
+            class="text-center text-lg-start text-white"
+            style="background-color: #1c2331"
+            >
+      <!-- Section: Social media -->
+      <section
+               class="d-flex justify-content-between p-4"
+               style="background-color: #6351ce"
+               >
+        <!-- Left -->
+        <div class="me-5">
+          <span>Contactanos mediantes nuestras redes sociales:</span>
+        </div>
+        <!-- Left -->
+  
+        <!-- Right -->
+        <div>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
+  
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold">ITBANK</h6>
+              <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                  />
+              <p>
+                El significado de la modernidad
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold">Productos</h6>
+              <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                  />
+              <p>
+                <a href="#!" class="text-white">Cuentas</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">Tarjetas</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">Seguros</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">Prestamos</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold">Links utiles</h6>
+              <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                  />
+              <p>
+                <a href="#!" class="text-white">Mi cuenta</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">Institucional</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">Costos</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">Ayuda</a>
+              </p>
+            </div>
+            <!-- Grid -->
+  
+            <!-- Grid -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold">Contacto</h6>
+              <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                  />
+              <p><i class="fas fa-home mr-3"></i> Iguazú 341, CABA C1437, AR</p>
+              <p><i class="fas fa-envelope mr-3"></i> info@itbank.ntc.ar</p>
+              <p><i class="fas fa-envelope mr-3"></i> empresas@itbank.ntc.ar</p>
+              <p><i class="fas fa-phone mr-3"></i> +54 362 5143993</p>
+            </div>
+            <!-- Grid  -->
+          </div>
+          <!-- Grid -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+  
+      <!-- Copyright -->
+      <div
+           class="text-center p-3"
+           style="background-color: rgba(0, 0, 0, 0.2)"
+           >
+        © 2022 Copyright:
+        <a class="text-white" href="https://itbank.ntc.ar/">itbank.ntc.ar</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
 </html>
