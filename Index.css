@@ -58,16 +58,15 @@ header{
     text-decoration: underline;
 }
 
+
 .navBarLoginButon{
     height: 400px;
-    color: #ffff;
-    font-weight: 500;
-    font-size: 22px;
-    font-family: 'roboto';
+
+.navBarLogin button{
     width: 200px;
-    background: #000000;
-    border-radius: 5px;
-}
+    height: 80px;
+
+
 .navBarLogin button:hover{
     cursor: pointer;
     border: solid #ffffff 1px;
@@ -112,6 +111,7 @@ header{
     align-content: center;
     flex-wrap: wrap;
     justify-content: flex-start;
+
     align-items: center;
     text-align: center;
     font-family: 'roboto';
@@ -128,6 +128,14 @@ header{
     font-family: 'roboto';
     font-weight: 600;
     
+}
+.novedadestext h3 {
+  
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 55px;
 }
 .novedadesBoxContainer{
     width: 60%;
