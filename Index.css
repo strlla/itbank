@@ -133,7 +133,6 @@ header{
     padding: 3rem;
 }
 
-
 .bienvenidaContainer h2{
     font-size: 1.5rem;
 }
@@ -145,8 +144,10 @@ header{
 .mainContent{
     width: 100%;
     display: flex;
+    flex-direction: column;
     column-gap: .75rem;
-    padding: 1rem 1rem 1rem 3rem;
+    row-gap: 1rem;
+    padding: 1rem;
 }
 
 .mainContentCol1{
@@ -166,12 +167,16 @@ header{
     text-align: center;
     color: white;
     display: grid;
-    row-gap: 1rem;
+    row-gap: 1.5rem;
 }
 
 .mainContentCol2 a{
     color: white;
     text-decoration: none;
+}
+
+.mainContentCol2 a:hover{
+    color: #e6e6e6;
 }
 
 .opcionesHeader{
@@ -182,17 +187,27 @@ header{
 }
 
 .opcionesButton {
-    min-width: 100px;
     background-color: #fff;
     border: 1px solid black;
     outline: none;
-    padding: 10px 60px;
     font-weight: 500;
+    transition: background-color .3s ease-in;
+    min-width: 19%;
+    padding: 10px 0;
 }
 
-.opcionesButton.active{
+.opcionesButton:hover{
+    background-color: #e6e6e6;
+}
+
+.opcionesButton.active {
     background-color: #9B8BFE;
     color: #fff;
+    min-width: 30%;
+}
+
+.opcionesButton.active:hover{
+    background-color: #877bd7;
 }
 
 .opcionesMain{
@@ -206,4 +221,24 @@ header{
     background-color: #D5CEFF;
     padding: .75rem;
     font-weight: 700;
+}
+
+@media screen and (min-width:1024px) {
+    .mainContent{
+        flex-direction: row;
+        padding: 1rem 1rem 1rem 3rem;
+    }
+
+    .opcionesButton {
+        min-width: 100px;
+        padding: 10px 60px;
+        min-width: none;
+    }
+
+    .opcionesButton.active {
+        padding: 10px 100px;
+        min-width: none;
+    }
+
+
 }
