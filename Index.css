@@ -128,3 +128,34 @@ header{
 }
 
 /* HOME */
+.bienvenidaContainer{
+    background-color: #D5CEFF;
+    padding: 3rem;
+}
+
+
+.bienvenidaContainer h2{
+    font-size: 1.5rem;
+}
+
+.mainContainer{
+    padding: 1rem 1rem 1rem 3rem;
+    margin: 0;
+}
+
+.mainContent{
+    width: 100%;
+    display: flex;
+    column-gap: .75rem;
+    padding: 1rem 1rem 1rem 3rem;
+}
+
+.mainContentCol1{
+    padding: 0;
+    flex: 3;
+}
+
+.mainContentCol2{
+    background-color: #9B8BFE;
+    flex: 1;
+}
