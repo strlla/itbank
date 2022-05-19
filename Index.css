@@ -255,6 +255,7 @@ header{
     .mainContent{
         flex-direction: row;
         padding: 1rem 1rem 1rem 3rem;
+        background-color: #fff;
     }
 
     .opcionesButton {
