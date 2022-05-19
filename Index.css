@@ -139,7 +139,6 @@ header{
 }
 
 .mainContainer{
-    padding: 1rem 1rem 1rem 3rem;
     margin: 0;
 }
 
@@ -152,10 +151,59 @@ header{
 
 .mainContentCol1{
     padding: 0;
-    flex: 3;
+    flex: 4;
 }
 
 .mainContentCol2{
     background-color: #9B8BFE;
     flex: 1;
+}
+
+.mainContentCol2 ul{
+    padding: 1rem;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    color: white;
+    display: grid;
+    row-gap: 1rem;
+}
+
+.mainContentCol2 a{
+    color: white;
+    text-decoration: none;
+}
+
+.opcionesHeader{
+    display: flex;
+    column-gap: 1rem;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.opcionesButton {
+    min-width: 100px;
+    background-color: #fff;
+    border: 1px solid black;
+    outline: none;
+    padding: 10px 60px;
+    font-weight: 500;
+}
+
+.opcionesButton.active{
+    background-color: #9B8BFE;
+    color: #fff;
+}
+
+.opcionesMain{
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 66px);
+    justify-content: space-between;
+}
+
+.opcionesMain .opciones{
+    background-color: #D5CEFF;
+    padding: .75rem;
+    font-weight: 700;
 }
