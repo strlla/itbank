@@ -14,8 +14,7 @@ header{
 }
 
 .headerContainer{
-    margin: 0 2rem;
-    
+    margin: 0 1rem;
 }
 
 .navBar{
@@ -38,6 +37,21 @@ header{
     margin: 0 1rem;
     column-gap: 2rem;
 }
+.navBarLogin .botonPrincipal{
+    background-color: #0077b6;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 0;
+    transition: background-color .2s ease-in;
+    color: #fff;
+    box-shadow: 2px -2px 0px 1px #022653;
+    border: 0;
+    outline: none;
+}
+.navBarLogin .botonPrincipal:hover{
+    background-color: #022653;
+}
+
 
 .navBarLogin p{
     font-family: 'Roboto';
@@ -60,29 +74,17 @@ header{
     text-decoration: underline;
 }
 
-.navBarLogin button{
-    width: 200px;
-    height: 80px;
-    color: #ffff;
-    font-weight: 500;
-    font-size: 22px;
-    font-family: 'roboto';
-    background-color: #0077b6 ;
-    color: #fff;
-    min-width: 30%;
-    box-shadow: 2px -2px 0px 1px #022653;
-    border-radius: 0;
+.navLogout{
+    background: transparent;
     border: 0;
-    outline: none;
+    color: #45b4ad;
+    font-weight: 600;
 }
-.navBarLogin button:hover{
-    cursor: pointer;
-    background-color: #0b57b3 ;
-}
+
 .headerContainer h1{
     color: #ffff;
     font-size: 36px;
-    margin: 1rem;
+    margin: 0;
     letter-spacing: 0.1em;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif    ;
 }
@@ -113,6 +115,8 @@ header{
     justify-content: flex-start;
     margin-top: 5rem;
     font-size: 30px;
+    align-items: center;
+
 }
 .novedadestext p{
     font-size: 15px;
@@ -126,9 +130,27 @@ header{
     font-size: 56px;
     line-height: 55px;
 }
+.novedadestext .botonPrincipal{
+    background-color: #0077b6;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 0;
+    transition: background-color .2s ease-in;
+    color: #fff;
+    box-shadow: 2px -2px 0px 1px #022653;
+    border: 0;
+    outline: none;
+    font-size: 15px;
+}
+.novedadestext .botonPrincipal:hover{
+    cursor: pointer;
+    background-color: #022653;
+}
+
 .novedadesBoxContainer{
-    width: 60%;
-    height: 100%;
+    width: 50%;
+    height: 70%;
+    margin-top: 2rem;
     background-color: #0077b6;
     display: flex;
     flex-wrap: wrap;
@@ -142,10 +164,10 @@ header{
     display: flex;
     align-items: center;
     margin: 0.4rem;
+    padding: 0.2rem;
     width: 670px;
-    height: 480px;
-    background-color: #ffff;
-    border: 1.5px #03045e solid;
+    background-color: #03045e;
+    border: 1.5px #0077b6 solid;
     
 
 }
@@ -167,6 +189,28 @@ header{
     
 }
 
+/*Medias  */
+
+@media screen and (max-width:450px) {
+    body{
+        width: 100%;
+    }
+    .novedades {
+        /* height: 662px; */
+        width: 100%;
+        background-color: #0077b6;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: stretch;
+        justify-content: space-evenly;
+        color: #ffff;
+        align-items: center;
+}
+.novedadesBoxContainer{
+    width: 80%;
+
+}
 /* HOME */
 .bienvenidaContainer{
     background-color: #03045e;
@@ -176,7 +220,38 @@ header{
 }
 
 .bienvenidaContainer h2{
-    font-size: 1.5rem;
+    font-size: 1rem;
+}
+
+.bienvenidaContainer span{
+    font-weight: 600;
+}
+
+.referidosContainer{
+    margin: 1rem;
+    padding: 1rem;
+    color: #FFF;
+    background-color: #03045e;
+}
+
+.referidosContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.referidosContent p {
+    margin: 0;
+}
+
+.referidosContent img {
+    width: 50px;
+}
+
+.referidosPregunta{
+    color: #45b4ad;
+    font-weight: 600;
 }
 
 .mainContainer{
@@ -234,7 +309,7 @@ header{
     border: 1px solid black;
     outline: none;
     font-weight: 500;
-    transition: background-color .3s ease-in;
+    transition: background-color .2s ease-in;
     min-width: 19%;
     font-size: .75rem;
     border-radius: 0 !important;
@@ -256,7 +331,7 @@ header{
 }
 
 .opcionesButton.active:hover{
-    background-color: #0077b6;
+    background-color: #0170ac !important;
 }
 
 .opcionesMain{
@@ -277,7 +352,7 @@ header{
 @media screen and (min-width:1024px) {
     .mainContent{
         flex-direction: row;
-        padding: 1rem 1rem 1rem 3rem;
+        padding: 1rem 3rem;
     }
 
     .opcionesButton {
@@ -295,6 +370,13 @@ header{
         row-gap: 0;
     }
 
+    .referidosContainer{
+        margin: 3rem;
+    }
+
+    .referidosContent img {
+        width: 100px;
+    }
 }
 
 .containerPromocion{
@@ -322,12 +404,33 @@ header{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif    ;
 }
 
+/* ESTILOS GLOBALES */
+.botonPrincipal {
+    background-color: #0077b6;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 0;
+    transition: background-color .2s ease-in;
+    color: #fff;
+    box-shadow: 2px -2px 0px 1px #022653;
+    border: 0;
+    outline: none;
+}
+
+.botonPrincipal:hover{
+    cursor: pointer;
+    background-color: #0170ac;
+}
+
 /* COMIENZO DE NUESTROS PRODUCTOS */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
 /* COLOR DE FONFO: #AB9DFF */
 
-
-
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: #FFF;
+}
 
 .title{
     text-align: center;
@@ -346,7 +449,7 @@ header{
 }
 
 .productos{
-    padding-bottom: 10px;
+    padding-bottom: 100px;
 }
 
 .container{
@@ -508,3 +611,5 @@ color: cornflowerblue;
     width: 35px;
     height: 35px;
 }
+
+
