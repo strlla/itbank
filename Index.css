@@ -9,7 +9,7 @@ header{
     width: 100%;
     padding: 1rem 2rem;
     background-color: #023e8a;
-    position: sticky;
+
     top: 0;
 }
 
@@ -49,7 +49,7 @@ header{
     outline: none;
 }
 .navBarLogin .botonPrincipal:hover{
-    
+    background-color: #022653;
 }
 
 
@@ -115,6 +115,8 @@ header{
     justify-content: flex-start;
     margin-top: 5rem;
     font-size: 30px;
+    align-items: center;
+
 }
 .novedadestext p{
     font-size: 15px;
@@ -146,8 +148,9 @@ header{
 }
 
 .novedadesBoxContainer{
-    width: 60%;
-    margin-top: 5rem;
+    width: 50%;
+    height: 70%;
+    margin-top: 2rem;
     background-color: #0077b6;
     display: flex;
     flex-wrap: wrap;
