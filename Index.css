@@ -210,7 +210,7 @@ header{
 .novedadesBoxContainer{
     width: 80%;
 
-}
+}}
 /* HOME */
 .bienvenidaContainer{
     background-color: #03045e;
@@ -449,7 +449,7 @@ html, body{
 }
 
 .productos{
-    padding-bottom: 100px;
+    padding-bottom: 10px;
 }
 
 .container{
@@ -583,6 +583,58 @@ html, body{
         display: block;
         margin:0 auto;
    }
+} 
+
+@media screen and (min-width: 480px) and (max-width: 780px){
+    .containerPromocion{
+        display:grid;
+        width: 100%;
+        height: 100%;
+        margin:auto;
+        padding:10px;
+        background-color: #AB9DFF;
+    }
+    
+    .promocionTexto{
+        grid-row: 2/3; 
+        grid-column: 2/10; 
+    }
+    
+    .promocionFoto{
+        grid-row: 1/1; 
+        grid-column: 1/12;  
+        width: 100%;
+        padding: 1rem;
+        display: block;
+        margin:0 auto;
+   }
+
+}
+
+
+@media screen and (max-width: 480px){
+    .containerPromocion{
+        display:grid;
+        width: 100%;
+        height: 100%;
+        margin:auto;
+        padding:0;
+        background-color: #0077b6;
+    }
+    
+    .promocionTexto{
+        grid-row: 2/3; 
+        grid-column: 2/10; 
+    }
+    
+    .promocionFoto{
+        grid-row: 1/1; 
+        grid-column: 1/12;  
+        width: 100%;
+        padding: 1rem;
+        display: block;
+        margin:0 auto;
+   }
 }   
 
 
@@ -611,10 +663,9 @@ color: cornflowerblue;
     width: 25px;
     height: 25px;
 }
-}
-<<<<<<< HEAD
 
 
+.columna2 h5 {
+    font-family: "Roboto",sans-serif;
+    font-size: 37px;
 }
-=======
->>>>>>> 6552c9dceca5f583880405d82d058ed2bd56d7e3
