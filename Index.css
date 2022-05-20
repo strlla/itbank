@@ -3,6 +3,7 @@
     padding: 0;
     max-width: 100%;
     max-height: 100%;
+    scroll-behavior: smooth;
 }
 
 header{
@@ -41,7 +42,7 @@ header{
     background-color: #0077b6;
     color: #fff;
     padding: 10px 30px;
-    border-radius: 0;
+    border-radius: 5px;
     transition: background-color .2s ease-in;
     color: #fff;
     box-shadow: 2px -2px 0px 1px #022653;
@@ -124,7 +125,7 @@ header{
 }
 .novedadestext h3 {
   
-    font-family: 'Roboto';
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 56px;
@@ -134,8 +135,8 @@ header{
     background-color: #0077b6;
     color: #fff;
     padding: 10px 30px;
-    border-radius: 0;
-    transition: background-color .2s ease-in;
+    border-radius: 5px;
+    transition: background-color .1s ease-in;
     color: #fff;
     box-shadow: 2px -2px 0px 1px #022653;
     border: 0;
@@ -150,6 +151,7 @@ header{
 .novedadesBoxContainer{
     width: 50%;
     height: 70%;
+    border-radius: 5px;
     margin-top: 2rem;
     background-color: #0077b6;
     display: flex;
@@ -166,8 +168,9 @@ header{
     margin: 0.4rem;
     padding: 0.2rem;
     width: 670px;
+    border-radius: 5px;
     background-color: #03045e;
-    border: 1.5px #0077b6 solid;
+    border: 1px #0077b6 solid;
     
 
 }
@@ -183,7 +186,10 @@ header{
     border-radius: 5px;
 }
 .novedadestext button:hover{
-    border: solid #ffffff 1px;
+    border: solid #ffffff 2px  ;
+    border-right: transparent;
+    border-top: transparent;
+    border-radius: 5px;
     cursor: pointer;
     background-color: #6750fe;
     
@@ -422,6 +428,77 @@ header{
     cursor: pointer;
     background-color: #0170ac;
 }
+
+
+/* BARRA DE ICONOS*/
+
+.icons {
+    background-color:#0077b6;
+    border-radius: 5px;
+    height: 11rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+}
+.icon-1{
+    width: 11rem;
+    height: 9rem;
+    border-radius: 5px;
+    background-color:#3498db;
+    box-shadow: 4px 2px 5px rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.icon-1:hover{
+    cursor: pointer;
+    margin: 0 2px;
+    box-shadow: 1px 2px 1px #03045e;
+    background-color: #0077b6;
+}
+.iconsContainer {
+    width: auto;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    float: right;
+    
+
+}
+.iconsContainer {
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.fa-bitcoin,.fa-chart-line,.fa-credit-card,.fa-lock{
+    width: 50px;
+    height: 50px;
+}
+.fa-bitcoin:hover,.fa-chart-line:hover,.fa-credit-card:hover,.fa-lock:hover .fa-solid:hover{
+    margin: 0 15px;
+
+}
+.iconText{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #fff;
+}   
+
+
 
 /* COMIENZO DE NUESTROS PRODUCTOS */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
