@@ -59,26 +59,6 @@ header{
     text-decoration: underline;
 }
 
-.navBarLogin button{
-    width: 200px;
-    height: 80px;
-    color: #ffff;
-    font-weight: 500;
-    font-size: 22px;
-    font-family: 'roboto';
-    background-color: #0077b6 ;
-    color: #fff;
-    min-width: 30%;
-    box-shadow: 2px -2px 0px 1px #022653;
-    border-radius: 0;
-    border: 0;
-    outline: none;
-}
-.navBarLogin button:hover{
-    cursor: pointer;
-    background-color: #0b57b3 ;
-}
-
 .navLogout{
     background: transparent;
     border: 0;
@@ -272,7 +252,7 @@ header{
     border: 1px solid black;
     outline: none;
     font-weight: 500;
-    transition: background-color .3s ease-in;
+    transition: background-color .2s ease-in;
     min-width: 19%;
     font-size: .75rem;
     border-radius: 0 !important;
@@ -294,7 +274,7 @@ header{
 }
 
 .opcionesButton.active:hover{
-    background-color: #0077b6;
+    background-color: #0170ac !important;
 }
 
 .opcionesMain{
@@ -365,6 +345,24 @@ header{
     grid-column: 7/12;  
     padding: 30px 30px 50px 50px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif    ;
+}
+
+/* ESTILOS GLOBALES */
+.botonPrincipal {
+    background-color: #0077b6;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 0;
+    transition: background-color .2s ease-in;
+    color: #fff;
+    box-shadow: 2px -2px 0px 1px #022653;
+    border: 0;
+    outline: none;
+}
+
+.botonPrincipal:hover{
+    cursor: pointer;
+    background-color: #0170ac;
 }
 
 /* COMIENZO DE NUESTROS PRODUCTOS */
