@@ -128,7 +128,7 @@ header{
 }
 .novedadesBoxContainer{
     width: 60%;
-    height: 100%;
+    margin-top: 5rem;
     background-color: #0077b6;
     display: flex;
     flex-wrap: wrap;
@@ -142,10 +142,10 @@ header{
     display: flex;
     align-items: center;
     margin: 0.4rem;
+    padding: 0.2rem;
     width: 670px;
-    height: 480px;
-    background-color: #ffff;
-    border: 1.5px #03045e solid;
+    background-color: #03045e;
+    border: 1.5px #0077b6 solid;
     
 
 }
@@ -167,6 +167,28 @@ header{
     
 }
 
+/*Medias  */
+
+@media screen and (max-width:450px) {
+    body{
+        width: 100%;
+    }
+    .novedades {
+        /* height: 662px; */
+        width: 100%;
+        background-color: #0077b6;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: stretch;
+        justify-content: space-evenly;
+        color: #ffff;
+        align-items: center;
+}
+.novedadesBoxContainer{
+    width: 80%;
+
+}
 /* HOME */
 .bienvenidaContainer{
     background-color: #03045e;

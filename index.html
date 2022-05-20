@@ -4,11 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-    crossorigin="anonymous"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"crossorigin="anonymous"
     />
 
     <link rel="stylesheet" href="./Index.css">
@@ -27,18 +23,18 @@
                 </div>
                 
                 <div class="navBarLogin">
-                    <p>Hacete Cliente</p>
-                    <button> Log In </button>
+                    <p>     Hacete Cliente</p>
+                    <button> <i class="fa-solid fa-user "></i>   Log In </button>
                 </div>
                 
             </nav>
         </div>
     </header>
-    
+     
     <section>
-        <div class="novedades">
-            <div class="novedadestext mb-4 container-sm ">
-                <div class="novedadesTitle"> 
+        <div class="novedades ">
+            <div class="novedadestext container-fluid  ">
+                <div class="novedadesTitle "> 
                   <h2>Promociones / </h2>
                   <h2>Novedades</h2>
               </div>
@@ -46,9 +42,32 @@
             </div>  
 
     
-            <div class="novedadesBoxContainer">  
-                <div class="novedadesBox">
-    
+            <div class="novedadesBoxContainer ">  
+                <div class="novedadesBox h-auto ">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="./Imagenes-productos/ImagenCarrousel.avif" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./Imagenes-productos/ImagenCarrousel2.avif" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./Imagenes-productos/ImagenCarrousel4.avif" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./Imagenes-productos/ImagenCarrousel3.avif" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
                 </div>
     
             </div>
@@ -95,7 +114,7 @@
  
 
 </body>
-
+<script src="https://use.fontawesome.com/releases/v6.1.1/js/all.js" data-auto-replace-svg="nest"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
 </html>
