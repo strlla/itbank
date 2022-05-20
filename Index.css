@@ -37,6 +37,21 @@ header{
     margin: 0 1rem;
     column-gap: 2rem;
 }
+.navBarLogin .botonPrincipal{
+    background-color: #0077b6;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 0;
+    transition: background-color .2s ease-in;
+    color: #fff;
+    box-shadow: 2px -2px 0px 1px #022653;
+    border: 0;
+    outline: none;
+}
+.navBarLogin .botonPrincipal:hover{
+    
+}
+
 
 .navBarLogin p{
     font-family: 'Roboto';
@@ -113,6 +128,23 @@ header{
     font-size: 56px;
     line-height: 55px;
 }
+.novedadestext .botonPrincipal{
+    background-color: #0077b6;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 0;
+    transition: background-color .2s ease-in;
+    color: #fff;
+    box-shadow: 2px -2px 0px 1px #022653;
+    border: 0;
+    outline: none;
+    font-size: 15px;
+}
+.novedadestext .botonPrincipal:hover{
+    cursor: pointer;
+    background-color: #022653;
+}
+
 .novedadesBoxContainer{
     width: 60%;
     margin-top: 5rem;
