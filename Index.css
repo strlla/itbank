@@ -12,8 +12,10 @@
 
 header{
     width: 100%;
-    padding: 2rem 0;
-    background-color: #023e8a    ;
+    padding: 1rem 2rem;
+    background-color: #023e8a;
+    position: sticky;
+    top: 0;
 }
 
 
@@ -32,8 +34,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    
+    align-items: baseline;
     column-gap: 2rem;
 }
 
@@ -65,8 +66,13 @@ header{
     font-weight: 500;
     font-size: 22px;
     font-family: 'roboto';
-    background: #000000;
-    border-radius: 5px;
+    background-color: #0077b6 !important;
+    color: #fff;
+    min-width: 30%;
+    box-shadow: 2px -2px 0px 1px #022653;
+    border-radius: 0;
+    border: 0;
+    outline: none;
 }
 .navBarLogin button:hover{
     cursor: pointer;
@@ -80,8 +86,6 @@ header{
 }
     
 .headerContainer span{
-    color: black;
-    
 }
 
 
@@ -89,7 +93,7 @@ header{
 .novedades{
     height: 662px;
     width: 100%;
-    background-color: #0077b6;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -162,7 +166,7 @@ header{
 
 /* HOME */
 .bienvenidaContainer{
-    background-color: #023e8a;
+    background-color: #03045e;
     padding: 1rem 3rem;
     color: #ffff;
     margin-bottom: 2rem;
