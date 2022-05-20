@@ -79,6 +79,14 @@ header{
     cursor: pointer;
     background-color: #0b57b3 ;
 }
+
+.navLogout{
+    background: transparent;
+    border: 0;
+    color: #45b4ad;
+    font-weight: 600;
+}
+
 .headerContainer h1{
     color: #ffff;
     font-size: 36px;
@@ -176,7 +184,38 @@ header{
 }
 
 .bienvenidaContainer h2{
-    font-size: 1.5rem;
+    font-size: 1rem;
+}
+
+.bienvenidaContainer span{
+    font-weight: 600;
+}
+
+.referidosContainer{
+    margin: 1rem;
+    padding: 1rem;
+    color: #FFF;
+    background-color: #03045e;
+}
+
+.referidosContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.referidosContent p {
+    margin: 0;
+}
+
+.referidosContent img {
+    width: 50px;
+}
+
+.referidosPregunta{
+    color: #45b4ad;
+    font-weight: 600;
 }
 
 .mainContainer{
@@ -277,7 +316,7 @@ header{
 @media screen and (min-width:1024px) {
     .mainContent{
         flex-direction: row;
-        padding: 1rem 1rem 1rem 3rem;
+        padding: 1rem 3rem;
     }
 
     .opcionesButton {
@@ -295,6 +334,13 @@ header{
         row-gap: 0;
     }
 
+    .referidosContainer{
+        margin: 3rem;
+    }
+
+    .referidosContent img {
+        width: 100px;
+    }
 }
 
 .containerPromocion{
@@ -326,8 +372,11 @@ header{
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
 /* COLOR DE FONFO: #AB9DFF */
 
-
-
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: #FFF;
+}
 
 .title{
     text-align: center;
