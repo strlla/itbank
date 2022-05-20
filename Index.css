@@ -482,16 +482,29 @@ header{
    }
 }   
 
-* {
+
+
+footer {
+    background-color: #023e8a ;
+    padding: 3rem;
+    color: white;
+  
+}
+footer section {
+float: right;
+}
+footer p {
     margin: 0;
-  }
-  html, body {
-    height: 100%;
-  }
-  .wrapper {
-    min-height: calc(100% - 4rem);
-  }
-  .footer {
-    height: 4rem;
-    background-color: #e2e2e2
-  }
+}
+footer a {
+    transition: color 0.3s ease;
+    color: #fff;
+    text-decoration: none;
+}
+footer a:hover{
+color: cornflowerblue;
+}
+.columna img {
+    width: 35px;
+    height: 35px;
+}
