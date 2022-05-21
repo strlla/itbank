@@ -835,6 +835,7 @@ input:focus{
     border: solid #ffffff 1.3px;
     border-top: none;
     border-right: none;
+    border-radius: 5px;
 }
 .overlayPanel button:hover, .overlayLeft button:hover,.overlayRight button:hover{
     background-color: #022653;
