@@ -572,11 +572,11 @@ html, body{
 .container{
     width: 100%;
     max-width: 1200px;
-    height: 430px;
+    row-gap: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: auto;
+    margin: 2rem auto;
 }
 
 .container .card{

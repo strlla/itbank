@@ -1,0 +1,116 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/Index.css" />
+    <link rel="stylesheet" href="./styles/headerMenu.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Home - ITBANK</title>
+  </head>
+  <body>
+    
+    <!-- HEADER -->
+    <header>
+      <div class="headerContainer">
+        <div class="navBar">
+          <div class="">
+            <h1>IT<span>BANK</span></h1>
+          </div>
+          <nav class="menuMobile">
+            <div id="menuToggle">
+              <input type="checkbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+              <ul id="menuMobile">
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2</a></li>
+                <li><a href="#">Item 3</a></li>
+                <li>
+                  <button class="navLogout">
+                    <span
+                      >Salir <i class="fa-regular fa-circle-right"></i
+                    ></span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <nav class="menuDesktop">
+            <ul>
+              <li>
+                <a href="">Ayuda</a>
+              </li>
+              <li>
+                <a href="">Perfil</a>
+              </li>
+              <li>
+                <a href="">Notificaciones</a>
+              </li>
+              <li>
+                <button class="navLogout">
+                  <a href="./index.html"><span>Salir <i class="fa-regular fa-circle-right"></i></span></a>
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+	
+	
+
+    
+
+    <footer>
+      <section>
+      <div class="container-footer">
+          
+          <div class="information">
+              <a href="#Titulo"> Ir al comienzo</a> | <a href="mailto:itbank@gmail.com"> Contacto</a>
+          </div>
+          
+          <div class ="copyright">
+          <a href="">Politica y privacidad</a> | <a href="">Terminos y condiciones</a> | <a href="">Mas info</a>
+          </div>
+          <div class=" copyright">
+          ITBANK© | 2022
+          </div>
+      </div>
+      </section>
+      <div class="columna2">
+          <h5>ITBANK</h5>
+          <div class="columna">
+             <a href=""><img src="./FooterIcons/Facebook.png"></a>  <a href=""><img src="./FooterIcons/Instagram.png"></a>  <a href=""><img src="./FooterIcons/Twitter.png"></a>
+          </div>
+          
+      </div>  
+      
+  </footer>
+
+<script
+      src="https://use.fontawesome.com/releases/v6.1.1/js/all.js"
+      data-auto-replace-svg="nest"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+
+  </body>
+</html>
