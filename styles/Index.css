@@ -522,11 +522,11 @@ header {
     align-items: center;
     justify-content: space-evenly;
 }
-.fa-bitcoin,.fa-chart-line,.fa-credit-card,.fa-lock{
+.fa-bitcoin,.fa-chart-line,.fa-phone,.fa-lock{
     width: 50px;
     height: 50px;
 }
-.fa-bitcoin:hover,.fa-chart-line:hover,.fa-credit-card:hover,.fa-lock:hover .fa-solid:hover{
+.fa-bitcoin:hover,.fa-chart-line:hover,.fa-phone:hover,.fa-lock:hover .fa-solid:hover{
     margin: 0 15px;
 
 }
