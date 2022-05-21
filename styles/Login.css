@@ -92,6 +92,10 @@ input:focus{
     cursor: pointer;
   
 }
+.loginForm{
+    visibility: visible;
+    opacity: 100;
+}
 .registerForm {
     opacity: 0;
     visibility: hidden;
@@ -101,15 +105,23 @@ input:focus{
     visibility: visible;
     
 }
+#crearCuenta.active{
+    opacity:100 ;
+    visibility: visible;
+}
+.overlayLeft{
+    opacity: 100;
+    visibility: visible;
+}
+.overlayLeft.active{
+    opacity: 0;
+    visibility:hidden;
+}
 .overlayRight{
-    opacity:0 ;
+    opacity: 0;
     visibility: hidden;
 }
 .overlayRight.active{
     visibility: visible;
     opacity: 100;
-}
-.loginBtn{
-opacity: 100;
-visibility: visible
 }
