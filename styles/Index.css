@@ -3,13 +3,15 @@
     padding: 0;
     max-width: 100%;
     max-height: 100%;
+    scroll-behavior: smooth;
+
 }
 
 header {
     width: 100%;
     padding: 1rem;
     background-color: #023e8a;
-    position: sticky;
+
     top: 0;
 }
 
@@ -37,12 +39,31 @@ header {
     margin: 0 1rem;
     column-gap: 2rem;
 }
+.navBarLogin .botonPrincipal{
+    background-color: #0077b6;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    transition: background-color .2s ease-in;
+    color: #fff;
+    box-shadow: 2px -2px 0px 1px #022653;
+    border: 0;
+    outline: none;
+}
+.navBarLogin .botonPrincipal:hover{
+    background-color: #022653;
+}
+.fa-user{
+    color: rgb(244, 181, 22);
+    margin-right: 3px;
+}
+
 
 .navBarLogin p{
-    font-family: 'Roboto';
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
-    font-weight: 600;
-    font-size: 22px;
+    font-weight: 400;
+    font-size: 20px;
     line-height: 134.77%;
     display: flex;
     align-items: center;
@@ -100,6 +121,8 @@ header {
     justify-content: flex-start;
     margin-top: 5rem;
     font-size: 30px;
+    align-items: center;
+
 }
 .novedadestext p{
     font-size: 15px;
@@ -107,15 +130,34 @@ header {
 }
 .novedadestext h3 {
   
-    font-family: 'Roboto';
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 56px;
     line-height: 55px;
 }
+.novedadestext .botonPrincipal{
+    background-color: #022653;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    transition: background-color .1s ease-in;
+    color: #fff;
+    box-shadow: 2px -5px 0px 1px #0077b6;
+    border: 0;
+    outline: none;
+    font-size: 15px;
+}
+.novedadestext .botonPrincipal:hover{
+    cursor: pointer;
+    background-color: #022653;
+}
+
 .novedadesBoxContainer{
-    width: 60%;
-    height: 100%;
+    width: 50%;
+    height: 70%;
+    border-radius: 5px;
+    margin-top: 2rem;
     background-color: #0077b6;
     display: flex;
     flex-wrap: wrap;
@@ -129,10 +171,11 @@ header {
     display: flex;
     align-items: center;
     margin: 0.4rem;
+    padding: 0.2rem;
     width: 670px;
-    height: 480px;
-    background-color: #ffff;
-    border: 1.5px #03045e solid;
+    border-radius: 5px;
+    background-color: #03045e;
+    border: 1px #0077b6 solid;
     
 
 }
@@ -148,12 +191,38 @@ header {
     border-radius: 5px;
 }
 .novedadestext button:hover{
-    border: solid #ffffff 1px;
+    border: solid #ffffff 2px  ;
+    border-right: transparent;
+    border-top: transparent;
+    border-radius: 5px;
     cursor: pointer;
     background-color: #6750fe;
     
 }
 
+/*Medias  */
+
+@media screen and (max-width:450px) {
+    body{
+        width: 100%;
+    }
+    .novedades {
+        /* height: 662px; */
+        width: 100%;
+        background-color: #0077b6;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: stretch;
+        justify-content: space-evenly;
+        color: #ffff;
+        align-items: center;
+}
+.novedadesBoxContainer{
+    width: 80%;
+
+}
+}
 /* HOME */
 .bienvenidaContainer{
     background-color: #03045e;
@@ -373,6 +442,103 @@ header {
     background-color: #0170ac;
 }
 
+
+/* BARRA DE SERVICIOS*/
+.servicios{
+        background-color: #fff;
+        text-align: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 500;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+}
+.serviciosTitle{
+    margin-top: 20px;
+    color: #022653;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight:500;
+}
+.icons {
+    background-color: #022653;
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    border-top: none    ;
+    height: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+}
+.icon-1{
+    color: #022653;
+    width: 11rem;
+    height: 9rem;
+    margin: 10px 10px;
+    border-radius: 5px;
+    background-color:rgba(255, 255, 255, 0.854);
+    box-shadow: 2px 1px 2px rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.icon-1:hover{
+    cursor: pointer;
+    margin: 0 2px;
+    box-shadow: 3px 2px 3px #03045e;
+    background-color: #fff;
+    color: #022653;
+}
+.iconsContainer {
+    height: auto;
+    width: auto;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    float: right;
+    
+
+}
+.iconsContainer {
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.fa-bitcoin,.fa-chart-line,.fa-credit-card,.fa-lock{
+    width: 50px;
+    height: 50px;
+}
+.fa-bitcoin:hover,.fa-chart-line:hover,.fa-credit-card:hover,.fa-lock:hover .fa-solid:hover{
+    margin: 0 15px;
+
+}
+.iconText{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #03045e;
+}   
+
+
+
 /* COMIENZO DE NUESTROS PRODUCTOS */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
 /* COLOR DE FONFO: #AB9DFF */
@@ -387,17 +553,17 @@ html, body{
 .title{
     text-align: center;
     font-size: 40px;
-    color: black;
+    color: #022653;
     margin-top: 100px;
-    font-weight: 100;
+    font-weight: 600;
 }
 
 .subtitle{
     text-align: center;
     font-size: 20px;
-    color: black;
-    margin-top: 0px;
-    font-weight: 0;
+    color: #022653;
+    margin-bottom:20px;
+    font-weight: 400;
 }
 
 .productos{
@@ -420,7 +586,7 @@ html, body{
     border-radius: 8px;
     box-shadow: 0 2px rgba(0,0,0,0.2);
     overflow: hidden;
-    margin: 20px;
+    margin: 0 20px;
     text-align: center;
     transition: all 0.25s;
     background-color: #fff;
@@ -535,4 +701,89 @@ html, body{
         display: block;
         margin:0 auto;
    }
+} 
+
+@media screen and (min-width: 480px) and (max-width: 780px){
+    .containerPromocion{
+        display:grid;
+        width: 100%;
+        height: 100%;
+        margin:auto;
+        padding:10px;
+        background-color: #AB9DFF;
+    }
+    
+    .promocionTexto{
+        grid-row: 2/3; 
+        grid-column: 2/10; 
+    }
+    
+    .promocionFoto{
+        grid-row: 1/1; 
+        grid-column: 1/12;  
+        width: 100%;
+        padding: 1rem;
+        display: block;
+        margin:0 auto;
+   }
+
+}
+
+
+@media screen and (max-width: 480px){
+    .containerPromocion{
+        display:grid;
+        width: 100%;
+        height: 100%;
+        margin:auto;
+        padding:0;
+        background-color: #0077b6;
+    }
+    
+    .promocionTexto{
+        grid-row: 2/3; 
+        grid-column: 2/10; 
+    }
+    
+    .promocionFoto{
+        grid-row: 1/1; 
+        grid-column: 1/12;  
+        width: 100%;
+        padding: 1rem;
+        display: block;
+        margin:0 auto;
+   }
 }   
+
+
+
+footer {
+    background-color: #023e8a ;
+    padding: 3rem;
+    color: white;
+  
+}
+footer section {
+float: right;
+}
+footer p {
+    margin: 0;
+}
+footer a {
+    transition: color 0.3s ease;
+    color: #fff;
+    text-decoration: none;
+}
+footer a:hover{
+color: cornflowerblue;
+}
+.columna img {
+    width: 25px;
+    height: 25px;
+}
+
+
+.columna2 h5 {
+    font-family: "Roboto",sans-serif;
+    font-size: 37px;
+}
