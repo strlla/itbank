@@ -5,16 +5,16 @@
     max-height: 100%;
 }
 
-header{
+header {
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 1rem;
     background-color: #023e8a;
     position: sticky;
     top: 0;
 }
 
 .headerContainer{
-    margin: 0 1rem;
+    margin: 0;
 }
 
 .navBar{
@@ -293,6 +293,14 @@ header{
 }
 
 @media screen and (min-width:1024px) {
+    .header {
+        padding: 1rem 2rem;
+    }
+
+    .headerContainer {
+        margin: 0 2rem;
+    }
+
     .mainContent{
         flex-direction: row;
         padding: 1rem 3rem;
@@ -373,6 +381,7 @@ html, body{
     margin: 0;
     padding: 0;
     background-color: #FFF;
+    overflow-x: hidden;
 }
 
 .title{
