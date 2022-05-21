@@ -92,3 +92,24 @@ input:focus{
     cursor: pointer;
   
 }
+.registerForm {
+    opacity: 0;
+    visibility: hidden;
+}
+.registerForm.active{
+    opacity: 100;
+    visibility: visible;
+    
+}
+.overlayRight{
+    opacity:0 ;
+    visibility: hidden;
+}
+.overlayRight.active{
+    visibility: visible;
+    opacity: 100;
+}
+.loginBtn{
+opacity: 100;
+visibility: visible
+}
