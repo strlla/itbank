@@ -483,10 +483,10 @@ a{
 }
 .icons {
     background-color: #022653;
-    width: 80%;
+    width: 85%;
     height: auto;
     border-radius: 10px;
-    border-top: none    ;
+    border-top: none;
     height: auto;
     display: flex;
     align-content: center;
@@ -497,9 +497,9 @@ a{
 }
 .icon-1{
     color: #022653;
-    width: 11rem;
+    width: 10rem;
     height: 9rem;
-    margin: 10px 10px;
+    margin: 11px 6px;
     border-radius: 5px;
     background-color:rgba(255, 255, 255, 0.854);
     box-shadow: 2px 1px 2px rgb(255, 255, 255);
@@ -517,21 +517,9 @@ a{
     background-color: #fff;
     color: #022653;
 }
-.iconsContainer {
-    height: auto;
-    width: auto;
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    align-items: center;
-    justify-content: space-evenly;
-    float: right;
-    
 
-}
 .iconsContainer {
-    width: 65%;
+    width: 85%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -560,12 +548,6 @@ a{
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
 /* COLOR DE FONFO: #AB9DFF */
 
-html, body{
-    margin: 0;
-    padding: 0;
-    background-color: #FFF;
-    overflow-x: hidden;
-}
 
 .title{
     text-align: center;
