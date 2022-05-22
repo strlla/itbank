@@ -6,7 +6,7 @@
     scroll-behavior: smooth;
 }
 .formsContainer{
-    background-image:url('../images/photo-1637825891028-564f672aa42c.avif');
+    background:#023e8a;
     background-position: unset;
     height: 100%;
     width:100%;
@@ -62,6 +62,15 @@ input:focus{
 .loginForm{
     margin-left: 20px;
 }
+.inputsContainer{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    align-content: space-between;
+}
 .overlayPanel {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     gap: 1rem;
@@ -96,6 +105,10 @@ input:focus{
     visibility: visible;
     opacity: 100;
 }
+.loginForm.active{
+    visibility:hidden;
+    opacity: 0;
+}
 .registerForm {
     opacity: 0;
     visibility: hidden;
@@ -105,23 +118,20 @@ input:focus{
     visibility: visible;
     
 }
-#crearCuenta.active{
-    opacity:100 ;
-    visibility: visible;
-}
+
 .overlayLeft{
-    opacity: 100;
-    visibility: visible;
-}
-.overlayLeft.active{
     opacity: 0;
     visibility:hidden;
 }
+.overlayLeft.active{
+    opacity: 100;
+    visibility:visible;
+}
 .overlayRight{
-    opacity: 0;
-    visibility: hidden;
+    opacity: 100;
+    visibility:visible;
 }
 .overlayRight.active{
-    visibility: visible;
+    visibility: hidden;
     opacity: 100;
 }
