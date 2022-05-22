@@ -125,3 +125,7 @@ nav.menuMobile {
     text-decoration: none;
   }
 }
+
+.headerLinks .active {
+  color: #45b4ad;
+}
