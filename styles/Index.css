@@ -39,6 +39,9 @@ header {
     margin: 0 1rem;
     column-gap: 2rem;
 }
+.navBarLogin a{
+    text-decoration: none;
+}
 .navBarLogin .botonPrincipal{
     background-color: #0077b6;
     color: #fff;
