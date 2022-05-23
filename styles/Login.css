@@ -15,7 +15,7 @@
     margin: 0;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
 }
 .formsContainer2{
@@ -160,3 +160,51 @@ input:focus{
     opacity: 100;
 }
 
+.loginBtnMobile {
+    display: none;
+}
+
+.loginBtnMobile, .signUpBtnMobile { 
+    display: none;
+}
+
+@media screen and (max-width: 840px) {
+    .formsContainer, .loginContainer {
+        width: 100%;
+    }
+    .formsContainer2 .loginContainer {
+        display: none;
+        width: 100%;
+    }
+
+    .crearCuentaContainer {
+        width: 100%;
+    }
+
+    #crearCuentaContainer{
+        display: none;
+    }
+
+    .loginContainer .overlayRight, .crearCuentaContainer .overlayLeft.active {
+        display: none;
+    }
+
+    .registerForm, .loginForm  {
+        width: 100%;
+        margin: 0;
+    }
+
+    .loginBtnMobile {
+        display: block;
+    }  
+
+    .loginBtnMobile, .signUpBtnMobile {
+        display: block;
+        background: transparent;
+        outline: 0;
+        border: 0;
+        color: white;
+        text-decoration: underline;
+    }
+
+}
