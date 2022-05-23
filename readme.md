@@ -1,6 +1,6 @@
-Hi there 👋 Somos el** Grupo 3** (Comisión 4)
+Hi there 👋 Somos el **Grupo 3** (Comisión 4)
 
-| **Nombre     **|  **Repositorio** |
+|           **Nombre**       |           **Repositorio**              |
 
 | Bustamante Daniela|@[DanielaBustamante]([url](https://github.com/DanielaBustamante)) |
 
