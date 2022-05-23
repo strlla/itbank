@@ -1,24 +1,23 @@
 Hi there 👋 Somos el **Grupo 3** (Comisión 4)
 
-|           **Nombre**       |           **Repositorio**              |
-| -------------------------- | ---------------------------------------|
+|---------**Nombre**--------------|-------**Repositorio**--------------------------------|
+| --------------------------------| -----------------------------------------------------|
 
-| Bustamante Daniela|@[DanielaBustamante]([url](https://github.com/DanielaBustamante)) |
-| -------------------------- | ---------------------------------------|
+| Bustamante Daniela|@[DanielaBustamante]([url](https://github.com/DanielaBustamante)) --|
+| --------------------------------| -----------------------------------------------------|
 
-| Varela Joaquin |@[joaquinv98](uhttps://github.com/joaquinv98rl)|
-| -------------------------- | ---------------------------------------|
+| Varela Joaquin |@[joaquinv98]([uhttps://github.com/joaquinv98rl])|
+| --------------------------------| -----------------------------------------------------|
 
-|Loto Mariano  | [@Marianoloto87]([url](https://github.com/Marianoloto87))|
-| -------------------------- | ---------------------------------------|
+|Loto Mariano  | [@Marianoloto87]([(https://github.com/Marianoloto87)])|
+| --------------------------------| -----------------------------------------------------|
 
-|Joaquin Lopez Rodriguez| [@Joaquin Lopez Rodriguez]([url](https://github.com/JoaquinLopezRodriguez))|
-| -------------------------- | ---------------------------------------|
+|Joaquin Lopez Rodriguez| [@Joaquin Lopez Rodriguez]([(https://github.com/JoaquinLopezRodriguez)])|
+| --------------------------------| -----------------------------------------------------|
+|Calabria Tomás Gabriel|[@Tomascalabria]([(https://github.com/Tomascalabria)])|
+| --------------------------------| -----------------------------------------------------|
 
-|Calabria Tomás Gabriel|[@Tomascalabria]([url](https://github.com/Tomascalabria))|
-| -------------------------- | ---------------------------------------|
-
-|Portocarrero Estrella| [@strlla]([url](https://github.com/strlla))|
+|Portocarrero Estrella| [@strlla]([(https://github.com/strlla)])|
 | -------------------------- | ---------------------------------------|
 
 
