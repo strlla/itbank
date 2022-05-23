@@ -4,9 +4,11 @@
     max-width: 100%;
     max-height: 100%;
     scroll-behavior: smooth;
-
 }
 
+body {
+    position: relative;
+}
 header {
     width: 100%;
     padding: 1rem;
@@ -415,6 +417,38 @@ header {
     color: white;
 } 
 
+.tarjetaContainer, .tarjetaInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: .5rem;
+}
+
+.tarjetaContainer img {
+    max-width: 60px;
+}
+
+.tarjetaInfo h3 {
+    color: #000000;
+    font-size: 1rem;
+}
+
+.tarjetaInfo span {
+    color: #121212;
+    font-size: .8rem;
+    margin-left: 20px;
+}
+
+.solicitarTarjeta {
+    display: block;
+    margin: 1rem 0;
+    color: #0170ac;
+}
+
+.solicitarTarjeta:hover{
+    color: #025886;
+    transition: color .2s ease-in;
+}
 /* ESTILOS GLOBALES */
 a{
     text-decoration: none !important;
@@ -662,7 +696,7 @@ a{
     .containerPromocion{
         display: flex;
         width: 100%;
-        padding: 1rem 3rem;
+        padding: 2rem 3rem;
     }
 
     .novedadestext{
