@@ -88,7 +88,7 @@ nav.menuMobile {
   transform-origin: 0 100px;
   transform: translate(112%);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  display: flex;
+  display: none;
   flex-direction: column;
   row-gap: 5rem;
   list-style: none;
