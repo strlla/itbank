@@ -172,7 +172,36 @@
                 aria-labelledby="pills-tarjetas-tab"
                 tabindex="0"
               >
-                TARJETAS
+                          
+              <div class="card">
+                <div class="card__front card__part">
+                  
+                  <img class="card__front-square card__square" src="./images/visa-logo.png">
+                  <P class="card_bank">ITBANK©</P>
+                  <p class="card_number">${number}</p>
+                  <div class="card__space-75">
+                    <span class="card_label" > Propietario</span>
+                    <p class="card_owner card_info"> ${nombre} </p>
+                  </div>
+                  <div class="card__space-25">
+                    <span class="card__label">Expires</span>
+                          <p class="card_info card_expiration">mm/yy</p>
+                  </div>
+                </div>
+                
+                <div class="card__back card__part">
+                  <div class="card__black-line"></div>
+                  <div class="card__back-content">
+                    <div class="card_secret_banner">
+                      <p class="card_code ">xxx</p>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              
+              
+
               </div>
               <div
                 class="tab-pane fade"
@@ -181,8 +210,9 @@
                 aria-labelledby="pills-inversiones-tab"
                 tabindex="0"
               >
-                INVERSIONES...
-              </div>
+              Inversiones...
+              
+            </div>
               <div
                 class="tab-pane fade"
                 id="pills-prestamos"
@@ -201,6 +231,7 @@
             <li><a href="#">Extractos</a></li>
             <li><a href="#">Límites</a></li>
             <li><a href="#">Turnos</a></li>
+            <li><a href="./Cotizaciones.html">Cotizaciones</a></li>
             <li><a href="#">Operaciones internacionales</a></li>
             <li><a href="#">Más operaciones</a></li>
           </ul>

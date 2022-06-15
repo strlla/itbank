@@ -6,6 +6,9 @@ const registerForm=document.querySelector('.registerForm')
 const overlayRight=document.querySelector('.overlayRight')
 const overlayLeft=document.querySelector('.overlayLeft')
 const formsContainer = document.querySelector('.formsContainer')
+const registerContainer = document.querySelector("#crearCuentaContainer")
+const headerContainer=document.querySelector('.headerContainer')
+
 document.addEventListener('click', e => {
     if (e.target === loginBtn || e.target===registerBtn) {
         registerForm.classList.toggle('active');
@@ -16,3 +19,4 @@ document.addEventListener('click', e => {
  
     }
 });
+
