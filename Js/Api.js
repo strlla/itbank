@@ -16,9 +16,7 @@ const generarCotizaciones = () => {
     .join("");
 };
 
-fetch("https://www.dolarsi.com/api/api.php?type=valoresprincipales", {
-  method: "GET",
-})
+fetch("https://www.dolarsi.com/api/api.php?type=valoresprincipales")
   .then((response) => response.json())
   .then((responseJSON) => {
     datos.push(...responseJSON);
