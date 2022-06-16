@@ -1,0 +1,35 @@
+.innerCotizaciones {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: auto;
+  column-gap: 2rem;
+}
+
+.cotizacion {
+  padding: 10px;
+  color: black;
+  height: fit-content;
+  min-height: 160px;
+  justify-content: space-evenly;
+}
+
+.cotizacion p {
+  margin-bottom: 0;
+}
+
+.titleCotizacion {
+  color: #023e8a;
+}
+
+@media screen and (min-width: 768px) {
+  .innerCotizaciones {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .innerCotizaciones {
+    grid-template-columns: auto auto auto auto;
+    column-gap: 1rem;
+  }
+}
