@@ -928,3 +928,13 @@ color: cornflowerblue;
     font-family: "Roboto",sans-serif;
     font-size: 37px;
 }
+
+/*-----Cotizaciones------*/
+.cotizaciones{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+.cotizacionesTitle{
+ color: #022653;
+}
