@@ -17,9 +17,9 @@ const generarCotizaciones = () => {
 };
 
 fetch("https://www.dolarsi.com/api/api.php?type=valoresprincipales")
-  .then((response) => response.json())
-  .then((responseJSON) => {
-    datos.push(...responseJSON);
+  .then((res) => res.json())
+  .then((res) => {
+    datos.push(...res);
     datos.find((dato) => {
       if (dato.casa.nombre === "Dolar Blue") {
         console.log(
