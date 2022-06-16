@@ -27,6 +27,8 @@
   max-width: 300px;
   height: 400px;
   padding: 1rem;
+  color: black;
+  font-family: 'Roboto', sans-serif;
 }
 
 .ayudaCard img {
