@@ -36,6 +36,7 @@
               <span></span>
               <span></span>
               <ul id="menuMobile">
+                <li><a href="./cotizaciones.html">Cotizaciones</a></li>
                 <li><a href="./ayuda.html">Ayuda</a></li>
                 <li><a href="#">Perfil</a></li>
                 <li><a href="#">Notificaciones</a></li>
@@ -52,6 +53,9 @@
 
           <nav class="menuDesktop">
             <ul>
+              <li>
+                <a href="./cotizaciones.html">Cotizcaiones</a>
+              </li>
               <li>
                 <a href="./ayuda.html">Ayuda</a>
               </li>
@@ -174,20 +178,34 @@
                 aria-labelledby="pills-tarjetas-tab"
                 tabindex="0"
               >
-                <div class="tabTarjetasContainer">
-                  <a href="">
-                    <div class="tarjetaContainer card">
-                      <div class="tarjetaImagen">
-                        <img src="./images/debitcard_front_blue.png" alt="" />
-                      </div>
-                      <div class="tarjetaInfo">
-                        <h3>Débito Tradicional</h3>
-                        <span>**** 9999</span>
+                <div class="card">
+                  <div class="card__front card__part">
+                    <img
+                      class="card__front-square card__square"
+                      src="./images/visa-logo.png"
+                    />
+                    <p class="card_bank">ITBANK©</p>
+                    <p class="card_number">${number}</p>
+                    <div class="card__space-75">
+                      <span class="card_label"> Propietario</span>
+                      <p class="card_owner card_info">${nombre}</p>
+                    </div>
+                    <div class="card__space-25">
+                      <span class="card__label">Expires</span>
+                      <p class="card_info card_expiration">mm/yy</p>
+                    </div>
+                  </div>
+
+                  <div class="card__back card__part">
+                    <div class="card__black-line"></div>
+                    <div class="card__back-content">
+                      <div class="card_secret_banner">
+                        <p class="card_code">xxx</p>
                       </div>
                     </div>
-                  </a>
+                  </div>
                 </div>
-                <a class="solicitarTarjeta" href="#">Solicitar tarjeta</a>
+
               </div>
               <div
                 class="tab-pane fade"
@@ -196,8 +214,52 @@
                 aria-labelledby="pills-inversiones-tab"
                 tabindex="0"
               >
-                Inversiones...
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <strong>U$S</strong>
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <div class="AccordionCompraDolares"> 
+                      <strong> Compra Dolares</strong>
+                      <a href="./Cotizaciones.html" class="btn-primary"><strong>Ir</strong></a>
+                    </div>
+                    <div class="AccordionVentaDolares" style="margin-top:0.8rem;">
+
+                      <strong>  Venta Dolares</strong>
+                      <a href="./Cotizaciones.html"  class=" btn-primary"><strong>Ir</strong></a>
+                    </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <strong>Euro €</strong>
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <div class="AccordionCompraDolares"> 
+                      <strong> Compra Euro</strong>
+                      <a href="./Cotizaciones.html" class="btn-primary"><strong>Ir</strong></a>
+                    </div>
+                    <div class="AccordionVentaDolares" style="margin-top:0.8rem;">
+
+                      <strong>  Venta Euro</strong>
+                      <a href="./Cotizaciones.html"  class=" btn-primary"><strong>Ir</strong></a>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div
                 class="tab-pane fade"
                 id="pills-prestamos"
@@ -216,6 +278,7 @@
             <li><a href="#">Extractos</a></li>
             <li><a href="#">Límites</a></li>
             <li><a href="#">Turnos</a></li>
+            <li><a href="./Cotizaciones.html">Cotizaciones</a></li>
             <li><a href="#">Operaciones internacionales</a></li>
             <li><a href="#">Más operaciones</a></li>
           </ul>
@@ -256,21 +319,6 @@
       </div>
     </div>
 
-    <script
-      src="https://use.fontawesome.com/releases/v6.1.1/js/all.js"
-      data-auto-replace-svg="nest"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-      crossorigin="anonymous"
-    ></script>
-
     <footer>
       <section>
         <div class="container-footer">
@@ -295,7 +343,19 @@
         </div>
       </div>
     </footer>
+<<<<<<< HEAD
   <script src="./Js/styles.js"></script>
+=======
+    <script
+      src="https://use.fontawesome.com/releases/v6.1.1/js/all.js"
+      data-auto-replace-svg="nest"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+>>>>>>> 67371ab547ca521e85f9f8dba36e51a4190bacc1
   </body>
 </html>
 
