@@ -9,6 +9,7 @@ const overlayRight=document.querySelector('.overlayRight')
 const overlayLeft=document.querySelector('.overlayLeft')
 const formsContainer = document.querySelector('.formsContainer')
 const registerContainer = document.querySelector("#crearCuentaContainer")
+const headerContainer=document.querySelector('.headerContainer')
 
 document.addEventListener('click', e => {
     if (e.target === loginBtnMobile || e.target === loginBtn || e.target===registerBtn || e.target===registerBtnMobile) {
