@@ -6,6 +6,9 @@
   scroll-behavior: smooth;
 }
 
+body {
+    position: relative;
+}
 header {
   width: 100%;
   padding: 1rem;
@@ -90,6 +93,10 @@ header {
 
 .navBarLogin p:hover {
   text-decoration: underline;
+}
+
+.navBarLogin p {
+    font-size: 1rem;
 }
 
 .navLogout span {
@@ -217,7 +224,6 @@ header {
 }
 
 /*Medias  */
-
 @media screen and (max-width: 450px) {
   body {
     width: 100%;
@@ -238,6 +244,7 @@ header {
     width: 80%;
   }
 }
+
 /* HOME */
 .bienvenidaContainer {
   background-color: #03045e;
@@ -589,6 +596,38 @@ header {
   -moz-transform: rotateY(0deg);
 }
 
+.tarjetaContainer, .tarjetaInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: .5rem;
+}
+
+.tarjetaContainer img {
+    max-width: 60px;
+}
+
+.tarjetaInfo h3 {
+    color: #000000;
+    font-size: 1rem;
+}
+
+.tarjetaInfo span {
+    color: #121212;
+    font-size: .8rem;
+    margin-left: 20px;
+}
+
+.solicitarTarjeta {
+    display: block;
+    margin: 1rem 0;
+    color: #0170ac;
+}
+
+.solicitarTarjeta:hover{
+    color: #025886;
+    transition: color .2s ease-in;
+}
 /* ESTILOS GLOBALES */
 a {
   text-decoration: none !important;
