@@ -20,13 +20,7 @@ fetch("https://www.dolarsi.com/api/api.php?type=valoresprincipales")
   .then((res) => res.json())
   .then((res) => {
     datos.push(...res);
-    datos.find((dato) => {
-      if (dato.casa.nombre === "Dolar Blue") {
-        console.log(
-          `Moneda: Dolar Blue / Precio de Venta: ${dato.casa.venta} / Precio de Compra: ${dato.casa.compra}`
-        );
-      }
-    });
+ 
     generarCotizaciones();
   })
   .catch((err) => console.log(err));
