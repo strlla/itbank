@@ -44,7 +44,9 @@ function armarCards(datos){
   actualizacion.innerHTML = `Última actualización: ${new Date().toLocaleDateString('es-us', { year:"numeric", month:"numeric", day:"numeric", hour: "2-digit",minute:"2-digit"}) }`
 };
 
+
 generarCotizaciones()
   
 //Agregamos un setInterval para que se actualice cada 5 minutos
 setInterval( () => generarCotizaciones(), 300000)
+
