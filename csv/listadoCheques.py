@@ -1,5 +1,4 @@
 '''
-Requerimientos: 
 
 2. El orden de los argumentos son los siguientes:  
   a. Nombre del archivo csv. 
@@ -24,3 +23,11 @@ siguientes condiciones:
 los cheques sin filtrar por estado
 
 '''
+import csv
+
+with open('Clientes.csv') as f:
+  reader = csv.reader(f, delimiter="|")
+  for row in reader:
+    print("DNI: {8}, Tipo: {10}, Estado: {9}, FechaOrigen: {6}, FechaPago: {7}".format(row[8],row[10],row[9],row[6],row[7]))
+
+# Modificar lo anterior
