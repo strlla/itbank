@@ -3,7 +3,6 @@
 # - No se puede crear un cliente sin dirección
 # - No se puede crear un cliente sin teléfono
 
-
 clientes=[]
 class Cliente:
     def __init__(self,nombre,apellido,numero,dni):
@@ -36,8 +35,6 @@ class cliente_Classic(Cliente):
         return False
     def puede_comprar_dolar(self):
         return False
- 
-    
 class cliente_Gold(Cliente):
     def __init__(self, nombre, apellido, numero, dni):
         super().__init__(nombre, apellido, numero, dni)
@@ -48,8 +45,6 @@ class cliente_Gold(Cliente):
         return f"Nombre completo: {self.nombre} {self.apellido}\nNum de cuenta: {self.numero}\nDni: {self.dni}\nCategoria: {self.__categoria}"
     def puede_crear_chequera(self):
         return True
-        
-
 class cliente_Black(Cliente):
    def __init__(self, nombre, apellido, numero, dni):
        super().__init__(nombre, apellido, numero, dni)
@@ -65,6 +60,4 @@ class cliente_Black(Cliente):
    def puede_crear_tarjeta(self):
         return True
 
-a=cliente_Classic("","Perez","123456789","12345678")
-b=cliente_Gold("","Perez","123456789","12345678")
-c=cliente_Black("Mati","Perez","123456789","12345678")
+
