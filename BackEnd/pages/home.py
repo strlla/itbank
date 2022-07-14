@@ -1,11 +1,16 @@
 import json
 from json2html import *
 
-with open('../data/ejemplo.json') as f: 
-        d = json.load(f)
-        scanOutput = json2html.convert(json=d)
-        htmlReportFile = "../../home.html"
-        
-        with open(htmlReportFile, 'w') as htmlfile:
-                htmlfile.write(str(scanOutput));
+path= r'D:\Estrella\Projects\ITBA\itbank\BackEnd\data\ejemplo.json'
+with open(path) as file:
+    data = json.load(file)
+    print(data)
                          
+# with open(path) as file:
+#     data = json.load(file)
+#     scanOutput = json2html.convert(json=data)
+#     htmlHomeFile =  r'D:\Estrella\Projects\ITBA\itbank\home.html'
+#     with open(htmlHomeFile, 'w') as htmlfile:
+#         htmlfile.write(str(scanOutput));
+#     print(data)
+                                                  
