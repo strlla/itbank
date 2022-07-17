@@ -1,4 +1,5 @@
 
+from cmath import inf
 from Cuenta import Cuenta
 
 
@@ -25,7 +26,7 @@ class Cliente():
     }
  }
     Caracteristicas_Gold = {
-          'limite_chequeras': 1,
+    'limite_chequeras': 1,
     'limite_tajetas_credito': 1,
     'cuenta_en_dolares': True,
     'caracteristicas_cuenta': {
@@ -41,7 +42,7 @@ class Cliente():
     'cuenta_en_dolares': True,
     'caracteristicas_cuenta': {
         'limite_extraccion_diario': 100000,
-        'limite_transferencia_recibida': -1,
+        'limite_transferencia_recibida': inf,
         'costo_transferencias': 0,
         'saldo_descubierto_disponible': 10000
     }
@@ -65,46 +66,60 @@ class Cliente():
       return f"Nombre completo: {self.nombre} {self.apellido}\nNum de Cliente: {self.numeroCliente}\nDni: {self.dni} \nTier: {self.__tier__}"
     
 
-    def puede_crear_chequera(self):
-        if self.__tier__ == "Classic":
-            print("No se admite la creación de chequeras para clientes Classic")
-            return False
-        elif self.__tier__ == "Gold":
-            print("Puede crear una chequera")     
-            return True
-        elif self.__tier__ == "Black":   
-            print("Puede crear hasta 2 chequeras")     
-            return True   
+    def puede_crear_chequera(self, chequeras_actuales=0):
+        self.chequeras_actuales = chequeras_actuales
 
-    def puede_crear_tarjeta_credito(self):
         if self.__tier__ == "Classic":
-            print("No se admite la creación de tarjetas de crédito para clientes Classic")
-            return False
-        elif self.__tier__ == "Gold":
-            print("Puede crear una tarjeta de crédito")     
-            return True
-        elif self.__tier__ == "Black":   
-            print("Puede crear hasta 5 tarjetas de crédito")     
-            return True   
+            return("No se admite la creación de chequeras para clientes Classic", False)
 
+        elif self.__tier__ == "Gold":
+            if self.chequeras_actuales == 0:
+                return("Puede crear una chequera",True)     
+            else:
+                return("Ha alcanzado el limite de chequeras",False)    
+
+
+        elif self.__tier__ == "Black":  
+            if self.chequeras_actuales <= 1:
+                restantes = 2 - chequeras_actuales
+                return(f"Puede crear {restantes} chequera/s", True)     
+            else:
+                return("Ha alcanzado el limite de chequeras", False)    
+
+
+    def puede_crear_tarjeta_credito(self, tarjetas_actuales=0):
+        self.tarjetas_actuales = tarjetas_actuales
+
+        if self.__tier__ == "Classic":
+            return ("No se admite la creación de tarjetas de crédito para clientes Classic", False)
+
+        elif self.__tier__ == "Gold":
+            if self.tarjetas_actuales == 0:
+                return ("Puede crear una tarjeta de crédito", True) 
+            else:
+                return ("Ha alcanzado el limite de tarjetas", False)    
+
+        elif self.__tier__ == "Black":  
+            if self.tarjetas_actuales <= 4:
+                restantes = 5 - tarjetas_actuales
+                return (f"Puede crear {restantes} tarjetas/s", True)    
+            else:
+                return ("Ha alcanzado el limite de tarjetas",False)    
 
     def puede_comprar_dolar(self):
         if self.__tier__ == "Classic":
-            print("No se admite la compra de dólares para clientes Classic")
-            return False
+            return ("No se admite la compra de dólares para clientes Classic", False)
         elif self.__tier__ == "Gold":
-            print("Puede comprar dólares")     
-            return True
+            return("Puede comprar dólares", True)     
         elif self.__tier__ == "Black":   
-            print("Puede comprar dólares")     
-            return True                          
+            return("Puede comprar dólares", True)     
+                      
 
 
-
+"""
 cliente_1=Cliente("Juan","Perez","123456789","12345678","BLACK")
 print(f"\nDatos del cliente:\n{cliente_1}\n\nDatos de la cuenta:\n{cliente_1.cuenta}\n")
-cliente_1.puede_crear_chequera()    
-cliente_1.puede_comprar_dolar()
-cliente_1.puede_crear_tarjeta_credito()
-
-
+print(cliente_1.puede_crear_chequera(2)[0])
+print(cliente_1.puede_crear_tarjeta_credito()[0])
+print(cliente_1.puede_comprar_dolar()[0])
+"""
