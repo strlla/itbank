@@ -1,6 +1,8 @@
 from Cliente import *
 
 class Razon():
+    #Devuelve una respuesta por cada tipo de error que puede llevar a un rechazo de la transacción
+
     def __init__(self, cliente, evento):
         self.operacion = evento["tipo"]
         self.tarjetas_actuales = evento["totalTarjetasDeCreditoActualmente"]
@@ -12,6 +14,7 @@ class Razon():
 
         self.motivo = ""
 
+        #Diferenciamos por cada tipo de transacción devuelta por el TPS y evaluamos los posibles errores
         if self.operacion == "RETIRO_EFECTIVO_CAJERO_AUTOMATICO":
             if self.monto > self.saldoEnCuenta + self.cliente.cuenta.saldo_descubierto_disponible:
                 self.motivo =  "Saldo insuficiente"
@@ -22,12 +25,16 @@ class Razon():
         elif self.operacion == "ALTA_TARJETA_CREDITO":
             self.motivo = self.cliente.puede_crear_tarjeta_credito(self.tarjetas_actuales)[0]
 
+        #FALTAN AGREGAR OTRAS TRANSACCIONES Y SUS POSIBLES ERRORES    
+
     def __str__(self):
         return self.motivo      
 
 
 
 class Resolver():
+    #Haciendo uso de la funcion Razones recorre un array de transacciones y devuelve un detalle
+
     def __init__(self,datos_tps):
         self.cliente = Cliente(datos_tps["nombre"], datos_tps["apellido"], datos_tps["numero"], datos_tps["dni"], datos_tps["tipo"])
         self.transacciones = datos_tps["transacciones"]
@@ -37,6 +44,7 @@ class Resolver():
                 print( f"{t['fecha']}: {t['tipo']} - {t['estado']}. Monto: ${t['monto']}\n" )
             else:
                 print(f"{t['fecha']}: {t['tipo']} - {t['estado']}. Monto: ${t['monto']}. Motivo del rechazo: {Razon(cliente = self.cliente, evento = t)}\n")    
+    
         
 #DATOS DE PRUEBA:
 datos = {
