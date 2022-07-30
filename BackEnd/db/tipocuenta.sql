@@ -1,0 +1,1 @@
+ALTER TABLE cuenta ADD tipo_cuenta text 

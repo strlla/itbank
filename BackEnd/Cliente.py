@@ -1,8 +1,13 @@
 
 from cmath import inf
+from urllib import request
+
+import requests
 from Cuenta import Cuenta
 
-
+url='https://raw.githubusercontent.com/strlla/itbank/develop/BackEnd/data/ejemplo_Black.json'
+data=requests.get(url).json()
+print(data)
 class Cliente():
     def crear_cuenta(self,tipo_cuenta):
         if tipo_cuenta=="Classic":
@@ -116,10 +121,8 @@ class Cliente():
                       
 
 
-"""
 cliente_1=Cliente("Juan","Perez","123456789","12345678","BLACK")
 print(f"\nDatos del cliente:\n{cliente_1}\n\nDatos de la cuenta:\n{cliente_1.cuenta}\n")
 print(cliente_1.puede_crear_chequera(2)[0])
 print(cliente_1.puede_crear_tarjeta_credito()[0])
 print(cliente_1.puede_comprar_dolar()[0])
-"""

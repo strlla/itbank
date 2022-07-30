@@ -1,0 +1,1 @@
+ALTER TABLE cuenta ADD marca_tarjeta text
