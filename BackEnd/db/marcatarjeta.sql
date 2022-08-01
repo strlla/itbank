@@ -4,4 +4,4 @@ debito BOOLEAN,
 credito BOOLEAN
 );
 
-insert into marca_tarjeta(debito,credito)
+
