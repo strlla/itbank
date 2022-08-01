@@ -4,3 +4,4 @@ caja_ahorro_pesos BOOLEAN NOT NULL,
 caja_ahorro_dolares BOOLEAN NOT NULL,
 cuenta_corriente BOOLEAN NOT NULL
 );
+

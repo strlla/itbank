@@ -1,14 +1,7 @@
 CREATE TABLE IF NOT EXISTS marca_tarjeta(
-marca_tarjeta_id PRIMARY KEY INTEGER AUTOINCREMENT,
+marca_tarjeta_id INTEGER PRIMARY KEY AUTOINCREMENT,
 debito BOOLEAN,
-credito BOOLEAN,
+credito BOOLEAN
 );
 
-INSERT INTO marca_tarjeta(debito,credito)
-VALUES (true,false);
-INSERT INTO marca_tarjeta(debito,credito)
-VALUES (false,true);
-INSERT INTO marca_tarjeta(debito,credito)
-VALUES (true,false);
-
-SELECT*from marca_tarjeta;
+insert into marca_tarjeta(debito,credito)
