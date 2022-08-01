@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/totoc/OneDrive/Escritorio/Programación/ITBA/itbank/BackEnd/db/itbank_db.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="150"/><column_width id="3" width="3087"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,15:mainsqlite_sequence"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="cliente" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="1" mode="0"/></sort><column_widths><column index="1" value="138"/><column index="2" value="175"/><column index="3" value="207"/><column index="4" value="159"/><column index="5" value="61"/><column index="6" value="115"/><column index="7" value="132"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="marca_tarjeta" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="188"/><column index="2" value="76"/><column index="3" value="83"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="sqlite_sequence" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="68"/><column index="2" value="61"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="sucursal" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="115"/><column index="2" value="152"/><column index="3" value="162"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="tipo_de_cuenta" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="165"/><column index="2" value="204"/><column index="3" value="221"/><column index="4" value="186"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">CREATE TABLE IF NOT EXISTS cliente(
+	customer_id INTEGER NOT NULL  ,
+	customer_name	TEXT NOT NULL,
+	 customer_surname  INTEGER NOT NULL,
+	 customer_DNI  TEXT UNIQUE NOT NULL,
+	 dob  TEXT NOT NULL,
+	 branch_id 	INTEGER NOT NULL ,
+	 tipo_cliente  TEXT NOT NULL,
+	 PRIMARY KEY(customer_id),
+	 FOREIGN KEY(branch_id) references sucursal(branch_id)
+
+);
+
+
+
+
+CREATE TABLE IF NOT EXISTS cuenta(
+account_id INTEGER PRIMARY KEY NOT NULL,
+customer_id INTEGER NOT NULL ,
+balance INTEGER NOT NULL,
+    check (balance&gt;=0)
+FOREIGN KEY(customer_id) references cliente(customer_id)
+);
+
+
+CREATE TABLE IF NOT EXISTS marca_tarjeta(
+marca_tarjeta_id INTEGER PRIMARY KEY AUTOINCREMENT,
+debito BOOLEAN,
+credito BOOLEAN
+);
+
+
+CREATE TABLE IF NOT EXISTS prestamo(
+loan_id char(50) NOT NULL ,
+loan_date DATE NOT NULL,
+loan_total INTEGER NOT NULL,
+customer_id INTEGER NOT NULL,
+PRIMARY  KEY(loan_id),
+FOREIGN KEY(customer_id) references cliente (customer_id)
+);
+
+
+CREATE TABLE IF NOT EXISTS sucursal(
+branch_id INTEGER NOT NULL,
+branch_name char(50) NOT NULL,
+branch_adress varchar(255) NOT NULL,
+FOREIGN KEY (branch_adress) references direcciones (branch_adress)  
+);
+CREATE TABLE IF NOT EXISTS tipo_de_cuenta(
+tipo_cuenta_id INTEGER PRIMARY KEY AUTOINCREMENT, 
+caja_ahorro_pesos BOOLEAN NOT NULL,
+caja_ahorro_dolares BOOLEAN NOT NULL,
+cuenta_corriente BOOLEAN NOT NULL
+);
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
