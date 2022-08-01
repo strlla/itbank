@@ -1,8 +1,8 @@
 DROP TABLE IF EXISTS `tarjetas`;
 
 CREATE TABLE `tarjetas` (
-  `id` INTEGER auto_increment,
-  `Owner` varchar(255) default NULL,
+  `id` INTEGER NOT NULL ,
+  `Owner` TEXT NOT NULL,
   `CreditNumber` CHECK(LENGTH(CreditNumber=20)),
   `CVV` INTEGER CHECK(LENGTH(CVV=3)),
   `Expiration` DATE NOT NULL ,
