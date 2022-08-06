@@ -1,13 +1,13 @@
 CREATE TABLE IF NOT EXISTS direccion (
-  `direccion_id` INT NOT NULL AUTO_INCREMENT,
-  `estado` VARCHAR(50) NOT NULL,
-  `ciudad` VARCHAR(50) NOT NULL,
-  `calle` VARCHAR(50) NOT NULL,
-  `numero_calle` INT NOT NULL,
+  `address_id` INT NOT NULL AUTO_INCREMENT,
+  `state` VARCHAR(50) NOT NULL,
+  `city` VARCHAR(50) NOT NULL,
+  `street` VARCHAR(50) NOT NULL,
+  `number_street` INT NOT NULL,
 
-  PRIMARY KEY (`direccion_id`));
+  PRIMARY KEY (`address_id`));
 
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Jeju","Sudhanoti","nascetur ridiculus mus.",2000),
   ("Kremenchuk","Kohistan","parturient montes, nascetur ridiculus",1110),
@@ -19,7 +19,7 @@ VALUES
   ("Zittau","Mazatlán","Curabitur egestas nunc",172),
   ("Albany","Concón","justo nec ante.",1331),
   ("Asan","Hà Nội","non, luctus sit amet,",616);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Vienna","Jamshedpur","pede, malesuada",2638),
   ("Xinjiang","Kaduna","erat nonummy",1331),
@@ -31,7 +31,7 @@ VALUES
   ("Pessac","Villenave-d'Ornon","Aliquam nisl.",2944),
   ("Tabaco","Dublin","Vestibulum",1096),
   ("Hoogeveen","Sakhalin","dictum magna. Ut tincidunt",187);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Ensenada","Oldenzaal","sapien, gravida non,",2416),
   ("Nizip","Tianjin","vitae, orci. Phasellus",255),
@@ -43,7 +43,7 @@ VALUES
   ("Sokoto","Dutse","urna suscipit nonummy. Fusce",334),
   ("Garaguso","Kurgan","dui nec urna suscipit",145),
   ("Hofors","Koppervik","urna suscipit nonummy. Fusce",2266);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Puerto Nariño","Belfast","id,",259),
   ("General Santos","Chastre-Villeroux-Blanmont","felis",521),
@@ -55,7 +55,7 @@ VALUES
   ("Juliaca","Ijebu Ode","porttitor vulputate, posuere",383),
   ("Banjarmasin","Kidapawan","elit. Nulla facilisi. Sed",2125),
   ("Bellefontaine","Regina","sed pede.",2717);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Rotello","Schwechat","et malesuada fames",2056),
   ("Pınarbaşı","Matamata","consectetuer adipiscing elit. Aliquam",1413),
@@ -67,7 +67,7 @@ VALUES
   ("Ceuta","Pacasmayo","fames ac",1566),
   ("Mülheim","Gols","orci, adipiscing non, luctus",890),
   ("Huaral","Fürth","vel arcu. Curabitur ut",2643);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Canberra","Ulloa (Barrial]","facilisis lorem",867),
   ("Changi Bay","Develi","Quisque fringilla",2146),
@@ -79,7 +79,7 @@ VALUES
   ("Mersin","Kerikeri","dui, nec tempus",2359),
   ("Bollnäs","Punggol","Vivamus nibh dolor,",652),
   ("Pavone del Mella","Liberia","interdum libero dui",1004);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Quảng Ngãi","Corozal","Integer id magna",2426),
   ("Gasteiz","Telde","nibh dolor, nonummy ac,",1806),
@@ -91,7 +91,7 @@ VALUES
   ("Masullas","Korneuburg","vitae dolor. Donec",329),
   ("Gravataí","La Hulpe","adipiscing elit. Aliquam",322),
   ("Greater Hobart","Evesham","arcu. Aliquam ultrices iaculis odio.",2826);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Ipatinga","Niterói","amet ultricies sem",380),
   ("Enschede","Riesa","tincidunt, neque vitae semper",2848),
@@ -103,7 +103,7 @@ VALUES
   ("Novosibirsk","Chortkiv","arcu. Sed eu",1115),
   ("Stekene","Pondicherry","gravida molestie",2905),
   ("Chortkiv","Cork","Cum sociis natoque penatibus et",2419);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Jeongeup","Grimstad","placerat, augue.",376),
   ("Palangka Raya","Ciénaga","sed, facilisis vitae, orci.",248),
@@ -115,7 +115,7 @@ VALUES
   ("Asan","Hattian Bala","non, sollicitudin a,",1819),
   ("Nam Sách","Galway","Etiam bibendum fermentum",516),
   ("Okara","San Marcos","turpis egestas. Aliquam fringilla",642);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Burgos","Jaén","scelerisque scelerisque dui. Suspendisse",713),
   ("Hattian Bala","Daejeon","bibendum fermentum metus.",2291),
@@ -127,7 +127,7 @@ VALUES
   ("Chancay","Chiclayo","mi tempor",24),
   ("Kimberley","Oranienburg","scelerisque dui. Suspendisse ac",1023),
   ("Puntarenas","Zhejiang","Donec nibh.",750);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Tarma","Bedok","Donec nibh. Quisque",266),
   ("Burnie","Paillaco","nunc nulla vulputate",2390),
@@ -139,7 +139,7 @@ VALUES
   ("Parauapebas","Urdaneta","Suspendisse sed dolor. Fusce mi",1017),
   ("Greymouth","Okene","pede. Cras vulputate velit",1409),
   ("Mâcon","Khairpur","molestie sodales.",863);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Curridabat","Boryspil","ornare sagittis felis. Donec tempor,",631),
   ("Nizip","Samal","lectus. Cum sociis natoque",2610),
@@ -151,7 +151,7 @@ VALUES
   ("Banjarbaru","Aurora","dolor, nonummy",1864),
   ("Ryazan","Gojal Upper Hunza","cursus a,",2283),
   ("Muradiye","Lelystad","ut eros",772);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Santa Cruz de Lorica","Tibet","a, scelerisque sed,",2980),
   ("Ourense","Duluth","hendrerit a, arcu. Sed et",2145),
@@ -163,7 +163,7 @@ VALUES
   ("Khushab","Whangarei","tincidunt",1854),
   ("Folkestone","Hilo","sem elit,",1399),
   ("Watson Lake","St. Ives","ultricies ligula. Nullam",1194);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Gore","Enkhuizen","mi, ac mattis velit justo",2318),
   ("Kohima","Lagos","ullamcorper, velit in",1411),
@@ -175,7 +175,7 @@ VALUES
   ("Minyar","Worcester","nec tempus mauris erat eget",1902),
   ("Finspång","Tunja","blandit viverra. Donec tempus, lorem",1216),
   ("Pazarcık","Hạ Long","faucibus id, libero.",1800);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("São José dos Pinhais","Tandag","non quam. Pellentesque",61),
   ("Boorsem","Waidhofen an der Ybbs","Vestibulum ut",552),
@@ -187,7 +187,7 @@ VALUES
   ("Penco","Juliaca","nunc est,",2025),
   ("Kapiti","Cáceres","sapien. Cras",840),
   ("Cedar Rapids","Sudbury","porttitor vulputate, posuere",2606);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("San Francisco","Chongqing","velit. Aliquam nisl.",2105),
   ("Semarang","Mykolaiv","posuere at, velit.",1574),
@@ -199,7 +199,7 @@ VALUES
   ("San Jose","Gagliato","augue id",2575),
   ("Cartago","Franeker","sapien, gravida non, sollicitudin",84),
   ("Santa Rosa de Cabal","Kremenchuk","vel arcu. Curabitur ut",2245);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Punggol","Queanbeyan","elementum",1385),
   ("Langley","Ceuta","Etiam imperdiet dictum magna.",666),
@@ -211,7 +211,7 @@ VALUES
   ("Ely","Värnamo","sed tortor. Integer aliquam adipiscing",1066),
   ("Fraserburgh","Buccheri","sit amet metus. Aliquam",1730),
   ("Dunbar","Gliwice","hendrerit neque. In ornare",2003);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Yahyalı","Graz","tristique",1046),
   ("Alajuela","Alanya","Ut sagittis lobortis",2944),
@@ -223,7 +223,7 @@ VALUES
   ("San Luis Potosí","Konotop","ipsum leo elementum sem,",867),
   ("La Carlota","Guápiles","dolor. Nulla semper",1196),
   ("Dublin","Vĩnh Long","sagittis. Duis gravida.",1929);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Runcorn","Puno","est ac facilisis facilisis,",2345),
   ("Leoben","Dadu","lectus. Nullam",843),
@@ -235,19 +235,19 @@ VALUES
   ("Jonesboro","Laarne","dui nec urna",582),
   ("Timaru","Värnamo","Sed eu eros.",270),
   ("Vienna","Sokoto","dictum placerat, augue. Sed molestie.",1806);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Picton","Clovenfords","a tortor. Nunc",2300),
   ("Mora","Ostrowiec Świętokrzyski","Mauris magna.",292),
   ("Jaboatão dos Guararapes","Lochgilphead","Phasellus at",2244),
   ("Miryang","Gdańsk","nascetur ridiculus mus.",1088),
-  ("Seevetal","Ciudad Santa Catarina","nunc sit",1537),
+  ("Seevetal","city Santa Catarina","nunc sit",1537),
   ("Mojokerto","Binjai","in faucibus",2633),
   ("Gijón","Imphal","Morbi metus. Vivamus euismod",275),
   ("Puntarenas","Simpang","et,",1284),
   ("Palmerston","Mỹ Tho","at pretium",599),
   ("Moncton","Cusco","faucibus id, libero. Donec",1852);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Qinghai","Sneek","sed, hendrerit",944),
   ("Sirsa","Larkana","lorem ut aliquam iaculis, lacus",117),
@@ -259,7 +259,7 @@ VALUES
   ("Dnipro","Watermaal-Bosvoorde","parturient montes, nascetur ridiculus",2308),
   ("Gisborne","Tando Allahyar","mi enim,",924),
   ("Raufoss","Bedok","Donec est. Nunc ullamcorper,",2026);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Shanxi","Chiclayo","Curabitur sed tortor. Integer aliquam",2243),
   ("Pleiku","Ełk","Duis ac arcu.",2803),
@@ -271,7 +271,7 @@ VALUES
   ("Bergerac","Brandon","ridiculus mus. Proin",1904),
   ("Kupang","Kraków","euismod et, commodo",1960),
   ("Punggol","Saint-Médard-en-Jalles","auctor,",2212);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Verdalsøra","Palmerston","purus ac tellus.",1702),
   ("Penrith","Novosibirsk","Curabitur consequat, lectus",2559),
@@ -283,7 +283,7 @@ VALUES
   ("Changi Bay","Erdemli","consequat purus. Maecenas",245),
   ("San Fernando","Pamplona","non ante bibendum ullamcorper. Duis",2785),
   ("Ajaccio","Belfast","cursus non, egestas",563);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Uiwang","Sandefjord","porttitor scelerisque neque.",1531),
   ("Zavitinsk","Silvassa","fringilla.",237),
@@ -295,7 +295,7 @@ VALUES
   ("Leiden","Bhavnagar","conubia nostra, per inceptos",1740),
   ("Bama","Kielce","aliquet lobortis, nisi",2570),
   ("Laramie","Cañas","enim mi tempor",2545);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Katsina","Henderson","vulputate ullamcorper magna. Sed eu",888),
   ("Western Water Catchment","Jamshedpur","fermentum",2807),
@@ -307,7 +307,7 @@ VALUES
   ("Butuan","Knittelfeld","fames ac",2476),
   ("Krefeld","Galway","euismod est",1648),
   ("Ankara","Kalush","nunc sed pede. Cum",2065);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Tlaquepaque","Murmansk","consectetuer adipiscing elit.",1457),
   ("Mata de Plátano","Zaporizhzhia","Pellentesque habitant morbi tristique senectus",2442),
@@ -319,7 +319,7 @@ VALUES
   ("Araban","Villach","metus sit amet ante.",974),
   ("Worms","Birecik","nisi a odio semper",2952),
   ("Dublin","Lim Chu Kang","placerat, augue. Sed molestie.",2978);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Digos","Geraldton-Greenough","pretium neque.",1130),
   ("Oslo","Montería","laoreet lectus",900),
@@ -331,7 +331,7 @@ VALUES
   ("Florencia","Darwin","diam lorem, auctor quis,",1737),
   ("Hope","Yongin","cursus in,",1368),
   ("Täby","Galway","lacus. Cras",254);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Alanya","Belfast","a purus. Duis",2506),
   ("Dublin","Maubeuge","Aliquam erat volutpat.",1042),
@@ -343,7 +343,7 @@ VALUES
   ("Naushahro Firoze","Lozova","Donec luctus aliquet odio.",545),
   ("Little Rock","Grasse","et magnis dis parturient montes,",2483),
   ("Mexico City","Caxias","fringilla cursus purus. Nullam scelerisque",1135);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Istmina","Belfast","Aenean eget magna.",199),
   ("Nice","Dublin","neque tellus,",961),
@@ -355,7 +355,7 @@ VALUES
   ("Whittlesey","Caen","ipsum. Suspendisse",585),
   ("Mitú","Devonport","ut, nulla. Cras",2596),
   ("Barranca","Silvan","Curabitur vel lectus. Cum sociis",2751);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("South Perth","Okene","eu odio tristique",573),
   ("Ryazan","Oxford","Cras vehicula aliquet libero.",235),
@@ -367,7 +367,7 @@ VALUES
   ("Nazilli","Edremit","mattis. Cras eget nisi",221),
   ("Sumy","Jeju","et,",1789),
   ("Gboko","Kaluga","dictum sapien. Aenean massa.",2472);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Mahikeng","Onze-Lieve-Vrouw-Lombeek","Proin vel nisl.",727),
   ("Bischofshofen","Mandai","mauris ipsum",1298),
@@ -379,7 +379,7 @@ VALUES
   ("Nässjö","Tlaquepaque","Quisque imperdiet, erat",643),
   ("Okene","Carterton","Aliquam tincidunt, nunc",2536),
   ("Belfast","Pekanbaru","ante ipsum",2932);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Tomaszów Mazowiecki","Cáceres","amet ornare",1757),
   ("Cajamarca","Pangkalpinang","sollicitudin orci",1745),
@@ -391,7 +391,7 @@ VALUES
   ("Jauchelette","Mattersburg","ultricies sem magna nec",1737),
   ("Sommethonne","Kalush","a, magna. Lorem",631),
   ("Collipulli","San Juan de Girón","risus varius orci,",1425);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Denpasar","San Rafael Abajo","orci",1638),
   ("Faridabad","Sabanalarga","egestas. Sed pharetra,",813),
@@ -403,7 +403,7 @@ VALUES
   ("Koppervik","Mexico City","sed, est.",319),
   ("Bethlehem","St. Pölten","sit amet diam",2046),
   ("Dörtyol","Baracaldo","Quisque varius. Nam porttitor",803);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Gönen","Weiz","lacinia at, iaculis quis,",780),
   ("Los Lagos","Odessa","sit amet, faucibus ut,",2933),
@@ -415,7 +415,7 @@ VALUES
   ("Bauchi","Vashkivtsi","lorem",1059),
   ("Billings","Sogamoso","quis, tristique ac, eleifend",2633),
   ("Dublin","Kakisa","in sodales elit erat vitae",1797);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Lelystad","Madrid","quam, elementum at, egestas a,",1601),
   ("Zielona Góra","Darmstadt","Quisque tincidunt pede",904),
@@ -427,7 +427,7 @@ VALUES
   ("Marlborough","Kavaratti","Nam porttitor",1908),
   ("San Juan del Río","Baubau","sapien.",1436),
   ("Harstad","Piotrków Trybunalski","bibendum sed, est.",2680);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Salzburg","Đông Hà","vel, faucibus id, libero. Donec",819),
   ("Chihuahua","Whitehorse","neque pellentesque massa",738),
@@ -439,7 +439,7 @@ VALUES
   ("Westport","Hoogeveen","sit amet,",2479),
   ("Dublin","Banjar","volutpat. Nulla facilisis. Suspendisse",2806),
   ("San Rafael","Sorsogon City","egestas ligula. Nullam feugiat placerat",235);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Iksan","Wha Ti","vitae, erat. Vivamus nisi.",2181),
   ("Isabela City","Koszalin","tincidunt, nunc ac mattis ornare,",1977),
@@ -451,7 +451,7 @@ VALUES
   ("Zavitinsk","Parramatta","euismod urna. Nullam lobortis",223),
   ("Bergen Mons","Bloemfontein","Nunc ac sem ut dolor",424),
   ("Giyani","Loughborough","mollis. Duis sit",1801);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Attock","Kuruman","ornare. In faucibus.",2410),
   ("Dunfermline","Salvador","congue a, aliquet vel,",2284),
@@ -463,7 +463,7 @@ VALUES
   ("Moss","Chaumont-Gistoux","nec,",2783),
   ("Jiangxi","Tank","primis",1270),
   ("Devonport","Daegu","penatibus et",2911);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("La Rochelle","Lancaster","molestie pharetra nibh. Aliquam",1837),
   ("Itanagar","Gillette","id sapien. Cras",909),
@@ -475,7 +475,7 @@ VALUES
   ("Norman","Bila Tserkva","non ante",1300),
   ("Fortaleza","Cork","vel sapien imperdiet ornare.",1410),
   ("Yunnan","Dublin","Nam nulla magna, malesuada vel,",175);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Swan Hill","Canberra","dui. Cum sociis natoque",873),
   ("Rangiora","Galway","vel sapien imperdiet",1575),
@@ -487,7 +487,7 @@ VALUES
   ("Jeju","Ockelbo","dignissim lacus. Aliquam",2113),
   ("Rodgau","Bethlehem","dictum. Phasellus in",140),
   ("South Jakarta","Guarulhos","urna. Nullam lobortis quam a",2040);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Santander","Plato","sed, facilisis vitae,",546),
   ("Bally","Sapele","rutrum lorem ac risus. Morbi",1580),
@@ -499,7 +499,7 @@ VALUES
   ("Gorzów Wielkopolski","Zirl","tempus mauris erat eget",1392),
   ("Kieldrecht","Stargard Szczeciński","ac",2786),
   ("Bukit Panjang","Tame","vulputate, nisi",709);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Imphal","Jilin","metus. Aliquam",2105),
   ("Darwin","Mmabatho","mollis. Duis",373),
@@ -511,7 +511,7 @@ VALUES
   ("Los Mochis","Tacoma","feugiat non, lobortis",2128),
   ("Hunan","Boo","luctus",1345),
   ("Killa Abdullah","Orenburg","erat, eget tincidunt",55);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Padang Sidempuan","Charters Towers","risus. Donec",2016),
   ("Hidalgo del Parral","Zeist","Praesent interdum ligula eu",1888),
@@ -523,7 +523,7 @@ VALUES
   ("Querétaro","Palangka Raya","adipiscing fringilla,",135),
   ("Napoli","Murcia","Donec tincidunt. Donec",2651),
   ("Mount Pearl","Nurdağı","tempus risus.",1150);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Guangxi","Knighton","scelerisque scelerisque dui.",42),
   ("Itanagar","Río Claro","mauris",575),
@@ -535,7 +535,7 @@ VALUES
   ("Madison","Qinghai","scelerisque mollis.",161),
   ("Rustenburg","Eindhoven","turpis egestas. Fusce",2731),
   ("Lanklaar","Katsina","enim commodo hendrerit.",2172);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Niterói","Xinjiang","Sed neque. Sed eget lacus.",1092),
   ("Armidale","Muntinlupa","Etiam ligula tortor,",2030),
@@ -547,7 +547,7 @@ VALUES
   ("Béthune","Lidköping","est. Nunc ullamcorper,",2456),
   ("Ibadan","Okene","pretium et, rutrum non,",1094),
   ("Inner Mongolia","Murcia","Nunc sed",860);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Bonnyrigg","Tarma","enim diam vel",1221),
   ("Shanghai","Athens","Pellentesque habitant",2852),
@@ -559,7 +559,7 @@ VALUES
   ("Paillaco","Hamilton","ipsum. Suspendisse non leo. Vivamus",2128),
   ("Irapuato","Belfast","eros.",2392),
   ("Chelmsford","Mokpo","a mi",67);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Pskov","Odessa","Aliquam tincidunt, nunc",949),
   ("Hamburg","Gävle","rutrum non, hendrerit",2731),
@@ -571,7 +571,7 @@ VALUES
   ("Mariquina","Long Eaton","convallis in, cursus",1469),
   ("Minna","Da Lat","justo eu arcu. Morbi sit",388),
   ("Monacilioni","Watson Lake","mollis. Integer",1738);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Ambon","Dreieich","ornare, facilisis",643),
   ("Preore","Yunnan","urna. Ut tincidunt vehicula",727),
@@ -583,7 +583,7 @@ VALUES
   ("Hamburg","Deutschkreutz","imperdiet",1208),
   ("Houston","Central Water Catchment","Nam ac nulla. In tincidunt",1221),
   ("Ijebu Ode","Torrejón de Ardoz","mi lacinia",427);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Ålesund","Marina South","tempor arcu.",1306),
   ("Pangkalpinang","Rawalakot","adipiscing elit.",2583),
@@ -595,7 +595,7 @@ VALUES
   ("Nelspruit","Palmerston","mollis",800),
   ("Schwalbach","Llaillay","in consequat enim",542),
   ("Mandai","Oss","Sed nunc est,",709);
-INSERT INTO `direccion` (`estado`,`ciudad`,`calle`,`numero_calle`)
+INSERT INTO `direccion` (`state`,`city`,`street`,`number_street`)
 VALUES
   ("Victor Harbor","Maiduguri","cursus. Integer",1073),
   ("Juazeiro","Puno","posuere,",2291),
