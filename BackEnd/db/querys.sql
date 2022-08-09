@@ -21,7 +21,7 @@ SET employee_hire_date = SUBSTR(employee_hire_date, 7, 4) || '-' || SUBSTR(emplo
 -- Vista de los customers  MENORES DE 40 por DNI de menor a mayor
 
 CREATE VIEW Vista_customers as
-SELECT customer_DNI ,branch_id ,customer_name , customer_age 
+SELECT customer_DNI ,branch_id ,customer_name ,g customer_age 
 FROM cliente 
 WHERE customer_age<40 
 ORDER BY cliente.customer_age ASC;  
