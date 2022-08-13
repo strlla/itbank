@@ -977,3 +977,16 @@ h1 {
   margin: 2rem 0 0;
   text-align: center;
 }
+
+#reporte {
+  font-family: 'Courier New', Courier, monospace;
+  margin: 3rem;
+}
+
+#reporte .reporte-info-cliente {
+  margin-bottom: 3rem;
+}
+
+#reporte .transaccion {
+  margin-bottom: 1rem;
+}
