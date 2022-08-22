@@ -25,20 +25,3 @@ set customer_age=    "2022/08/05"-cliente.dob
 where cliente.customer_id=cliente.customer_id;
 
 
-
--- Vista de los customers  MENORES DE 40 por DNI de menor a mayor
-
-CREATE VIEW Vista_customers as
-SELECT customer_DNI ,branch_id ,customer_name ,g customer_age 
-FROM cliente 
-WHERE customer_age<40 
-ORDER BY cliente.customer_age ASC;  
-
--- Vista de los customers  tyler y anne por edad de mayor a menor
-
-
-CREATE VIEW view_clienteName as 
-SELECT branch_id ,customer_name,customer_age 
-FROM cliente 
-WHERE  cliente.customer_name="Anne" or cliente.customer_name="Tyler" 
-ORDER BY cliente.customer_age DESC;  
