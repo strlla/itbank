@@ -52,7 +52,7 @@ INSERT INTO auditoria (Old_balance, New_balance, Old_iban, New_iban, Old_type, N
 END;
 
 UPDATE cuenta
-SET balance = balance - 100
+SET balance = balance - 10000
 WHERE account_id BETWEEN 10 AND 14;
 
 CREATE unique index DNI ON cliente(customer_DNI);
@@ -68,11 +68,11 @@ BEGIN TRANSACTION;
 
     UPDATE cuenta
     SET balance = balance - 1000
-    WHERE account_id = 20000;
+    WHERE account_id = 200;
 
     UPDATE cuenta
     SET balance = balance + 1000
-    WHERE account_id = 40000;
+    WHERE account_id = 400;
 
     INSERT INTO movimientos (
     "numero_cuenta",
