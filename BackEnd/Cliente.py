@@ -1,45 +1,122 @@
 
 from cmath import inf
+from re import S
+from unicodedata import name
 from urllib import request
+from Direcciones import Direccion
 
-import requests
+from Productos import Chequera
+from Cuenta import Caja_ahorro_pesos,Caja_ahorro_dolares, Cuenta_corriente
+
+
 from Cuenta import Cuenta
 
-url='https://raw.githubusercontent.com/strlla/itbank/develop/BackEnd/data/ejemplo_Black.json'
-data=requests.get(url).json()
-print(data)
-class Cliente():
-    def __init__(self,nombre,apellido,numeroCliente,dni,__tier__):
+# url='https://raw.githubusercontent.com/strlla/itbank/develop/BackEnd/data/ejemplo_Black.json'
+# data=requests.get(url).json()
+# print(data)
+class Cliente(Direccion):
+ 
+    def __init__(self,nombre,apellido,direccion,numeroCliente,dni,__tier__,caracteristicas):
         self.nombre=nombre
         self.apellido=apellido
         self.numeroCliente=numeroCliente
         self.dni=dni
-        self.__tier__=__tier__.capitalize()
-        self.transacciones=0
-        self.cantidad_chequeras=0
-        self.max_chequeras=0
-        self.max_tarjetasCredito=0
-        self.max_tarjetasDebito=0
+        self.direccion=direccion
+        self.__tier__=__tier__
+        self.chequeras=0
+        self.limite_chequeras=caracteristicas["limite_chequeras"]
+        self.limite_tarjetasCredito=["limite_tajetas_credito"]
         self.tarjetasDebito=0
+        self._cuenta_en_dolares=caracteristicas["cuenta_en_dolares"]
         self.tarjetas_credito=0
+        if direccion:
+            self._direccion = Direccion(*direccion)
+        else:
+            self._direccion = None
     def puede_comprar_dolares(self):
         return False
     def puede_crear_chequera(self):
-        return self.cantidad_chequeras<self.max_chequeras   
+        return self.chequeras<self.limite_chequeras   
     def puede_crear_tarjeta_credito(self):
-       return self.max_tarjetasCredito>self.tarjetas_credito
+       return self.limite_tarjetasCredito>self.tarjetas_credito
     def puede_crear_tarjeta_debito(self):
-        return self.max_tarjetasDebito>self.tarjetasDebito
+        return self.limite_tarjetasDebito>self.tarjetasDebito
+    
+    def __repr__(self):
+     return f'{self.nombre} {self.apellido} {self.numeroCliente} {self.dni} {self.__tier__}  \nCuentas: {self.cuentas}'
 
 
+
+        
+Caracteristicas_Classic = {
+'limite_chequeras': 0,
+'limite_tajetas_credito': 0,
+'cuenta_en_dolares': False,
+'caracteristicas_cuenta': {
+ 'limite_extraccion_diario': 10000,
+    'limite_transferencia_recibida': 50000,
+    'costo_transferencias': 0.01,
+    'saldo_descubierto_disponible': 0
+}
+}
+Caracteristicas_Gold = {
+'limite_chequeras': 1,
+'limite_tajetas_credito': 1,
+'cuenta_en_dolares': True,
+'caracteristicas_cuenta': {
+    'limite_extraccion_diario': 20000,
+    'limite_transferencia_recibida': 500000,
+    'costo_transferencias': 0.005,
+    'saldo_descubierto_disponible': 10000
+}
+}
+Caracteristicas_Black = {
+'limite_chequeras': 2,
+'limite_tajetas_credito': 5,
+'cuenta_en_dolares': True,
+'caracteristicas_cuenta': {
+    'limite_extraccion_diario': 100000,
+    'limite_transferencia_recibida': inf,
+    'costo_transferencias': 0,
+    'saldo_descubierto_disponible': 10000
+}
+}
 
 
 class Classic(Cliente):
-    print('falta completar')
+   def __init__(self, nombre, apellido,direccion, numeroCliente, dni):
+       super().__init__(nombre, apellido,direccion, numeroCliente, dni, 'Classic',Caracteristicas_Classic)
+       self.cuentas=[Caja_ahorro_pesos(Caracteristicas_Classic['caracteristicas_cuenta']["limite_extraccion_diario"],Caracteristicas_Classic['caracteristicas_cuenta']["limite_transferencia_recibida"],Caracteristicas_Classic['caracteristicas_cuenta']['costo_transferencias'],Caracteristicas_Classic['caracteristicas_cuenta']["saldo_descubierto_disponible"])]
+       self.chequeras=Caracteristicas_Classic['limite_chequeras']
+       self.tarjetas_credito=Caracteristicas_Classic['limite_tajetas_credito']
+       self.tarjetasDebito=1
+ 
+class Gold(Cliente):
+    def __init__(self, nombre, apellido, direccion,numeroCliente, dni):
+        super().__init__(nombre, apellido, direccion,numeroCliente, dni,'GOLD',Caracteristicas_Gold)
+        self.cuentas=[Caja_ahorro_pesos(Caracteristicas_Gold['caracteristicas_cuenta']['limite_extraccion_diario'],Caracteristicas_Gold['caracteristicas_cuenta']['limite_transferencia_recibida'],Caracteristicas_Gold['caracteristicas_cuenta']['costo_transferencias'],Caracteristicas_Gold['caracteristicas_cuenta']['saldo_descubierto_disponible']),
+        Caja_ahorro_dolares(Caracteristicas_Gold['caracteristicas_cuenta']['limite_extraccion_diario'],Caracteristicas_Gold['caracteristicas_cuenta']['limite_transferencia_recibida'],Caracteristicas_Gold['caracteristicas_cuenta']['costo_transferencias'],Caracteristicas_Gold['caracteristicas_cuenta']['saldo_descubierto_disponible']),
+        Cuenta_corriente(Caracteristicas_Gold['caracteristicas_cuenta']['limite_extraccion_diario'],Caracteristicas_Gold['caracteristicas_cuenta']['limite_transferencia_recibida'],Caracteristicas_Gold['caracteristicas_cuenta']['costo_transferencias'],Caracteristicas_Gold['caracteristicas_cuenta']['saldo_descubierto_disponible'])
+        ]
+        self.tarjetas_credito=Caracteristicas_Gold['limite_tajetas_credito']
+        self.tarjetasDebito=1
+        self.chequeras=Caracteristicas_Gold['limite_chequeras']
+    def puede_comprar_dolares(self):
+        return True
+        
+    
+class Black(Cliente):
+    def __init__(self, nombre, apellido, direccion,numeroCliente, dni):
+        super().__init__(nombre, apellido, direccion,numeroCliente, dni, 'BLACK',Caracteristicas_Black)
+        self.cuentas=[Caja_ahorro_pesos(Caracteristicas_Black['caracteristicas_cuenta']['limite_extraccion_diario'],Caracteristicas_Black['caracteristicas_cuenta']['limite_transferencia_recibida'],Caracteristicas_Black['caracteristicas_cuenta']['costo_transferencias'],Caracteristicas_Black['caracteristicas_cuenta']['saldo_descubierto_disponible'])]
+        self.tarjetas_credito=5
+        self.tarjetasDebito=2
+        self.chequeras=3
 
-
-# cliente_1=Cliente("Juan","Perez","123456789","12345678","BLACK")
+    
+cliente_1=Classic('Juan','lopez','1331',313113,13113)
 # print(f"\nDatos del cliente:\n{cliente_1}\n\nDatos de la cuenta:\n{cliente_1.cuenta}\n")
 # print(cliente_1.puede_crear_chequera(2)[0])
 # print(cliente_1.puede_crear_tarjeta_credito()[0])
 # print(cliente_1.puede_comprar_dolar()[0])
+print(cliente_1)
