@@ -6,7 +6,7 @@ ORDER by balance desc;
 SELECT customer_name, customer_surname,
 (CASE WHEN dob is NOT NULL THEN cast(strftime('%Y.%m%d', 'now') - strftime('%Y.%m%d', dob ) as int) END)as age
 FROM cliente
-WHERE customer_surname like "Z%"
+WHERE customer_surname like "%Z%"
 
 SELECT customer_name,customer_surname,
 (CASE WHEN dob is NOT NULL THEN cast(strftime('%Y.%m%d', 'now') - strftime('%Y.%m%d', dob ) as int) END)as age, sucursal.branch_name
@@ -17,7 +17,7 @@ order by branch_name;
 
 SELECT loan_total
 FROM prestamo
-where loan_total > 80000
+where loan_total > 8000000
 UNION 
 SELECT loan_type
 FROM prestamo

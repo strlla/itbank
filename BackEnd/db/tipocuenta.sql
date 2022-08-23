@@ -5,3 +5,4 @@ caja_ahorro_dolares BOOLEAN NOT NULL,
 cuenta_corriente BOOLEAN NOT NULL
 );
 
+
