@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS `tarjetas`;
 CREATE TABLE `tarjetas` (
   `id` INTEGER NOT NULL ,
   `Owner` TEXT NOT NULL,
-  `CreditNumber` CHECK(LENGTH(CreditNumber=20)),
+  `CreditNumber` CHECK(LENGTH(CreditNumber>=20)),
   `CVV` INTEGER CHECK(LENGTH(CVV=3)),
   `Expiration` DATE NOT NULL ,
   `Tipo_Tarjeta` TEXT NOT NULL,
@@ -11,19 +11,7 @@ CREATE TABLE `tarjetas` (
   PRIMARY KEY (`id`)
   FOREIGN KEY(marca_tarjeta_id) REFERENCES marca_tarjeta(marca_tarjeta_id)
 ) ;
-DROP TABLE IF EXISTS `tarjetas`;
 
-CREATE TABLE `tarjetas` (
-  `id` INTEGER NOT NULL ,
-  `Owner` TEXT NOT NULL,
-  `CreditNumber` CHECK(LENGTH(CreditNumber=20)),
-  `CVV` INTEGER CHECK(LENGTH(CVV=3)),
-  `Expiration` DATE NOT NULL ,
-  `Tipo_Tarjeta` TEXT NOT NULL,
-  `marca_tarjeta_id` INTEGER NOT NULL,
-  PRIMARY KEY (`id`)
-  FOREIGN KEY(marca_tarjeta_id) REFERENCES marca_tarjeta(marca_tarjeta_id)
-) ;
 INSERT INTO tarjetas (Owner,CreditNumber,CVV,Expiration,Tipo_Tarjeta,marca_tarjeta_id)
 VALUES
     ('Cassidy Phelps', '4539 5728 4113 6888', '445', '01/08/23', 'Credito', '2'),

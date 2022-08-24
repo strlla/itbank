@@ -46,13 +46,13 @@ CREATE TABLE IF NOT EXISTS auditoria_cuenta(
     user_action text,
     created_at text);
     
-CREATE TRIGGER audi AFTER INSERT ON auditoria_cuenta
+CREATE TRIGGER audi AFTER UPDATE ON auditoria_cuenta
 BEGIN 
 INSERT INTO auditoria (Old_balance, New_balance, Old_iban, New_iban, Old_type, New_type) VALUES(NEW.Old_balance, NEW.New_balance, NEW.Old_iban, NEW.New_iban, NEW.Old_type, NEW.New_type);
 END;
 
 UPDATE cuenta
-SET balance = balance - 100
+SET balance = balance - 10000
 WHERE account_id BETWEEN 10 AND 14;
 
 CREATE unique index DNI ON cliente(customer_DNI);
@@ -87,5 +87,5 @@ BEGIN TRANSACTION;
     "tipo_op",
     "hora")
     VALUES (400, +1000, "transferencia", datetime("now"));
-    
-ROLLBACK;
+
+COMMIT;
