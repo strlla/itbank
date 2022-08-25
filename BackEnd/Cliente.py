@@ -1,8 +1,5 @@
 
 from cmath import inf
-from re import S
-from unicodedata import name
-from urllib import request
 from Direcciones import Direccion
 
 from Productos import Chequera
@@ -26,17 +23,15 @@ class Cliente(Direccion):
         self.chequeras=0
         self.limite_chequeras=caracteristicas["limite_chequeras"]
         self.limite_tarjetasCredito=["limite_tajetas_credito"]
+        self.limite_extraccion_diario=caracteristicas["caracteristicas_cuenta"]["limite_extraccion_diario"]
         self.tarjetasDebito=0
         self._cuenta_en_dolares=caracteristicas["cuenta_en_dolares"]
         self.tarjetas_credito=0
-        if direccion:
-            self._direccion = Direccion(*direccion)
-        else:
-            self._direccion = None
     def puede_comprar_dolares(self):
         return False
     def puede_crear_chequera(self):
         return self.chequeras<=self.limite_chequeras   
+
     def puede_crear_tarjeta_credito(self):
        return self.limite_tarjetasCredito>self.tarjetas_credito
     def puede_crear_tarjeta_debito(self):
@@ -48,7 +43,7 @@ class Cliente(Direccion):
     def __repr__(self):
      return f'{self.nombre} {self.apellido} {self.numeroCliente} {self.dni} {self.__tier__}  \nCuentas: {self.cuentas}'
 
-
+    
 
         
 Caracteristicas_Classic = {
@@ -121,7 +116,5 @@ class Black(Cliente):
     def puede_comprar_dolares(self):
          return True
     
-cliente_1=Black('Juan','lopez','1331',313113,13113)
+cliente_1=Classic('Juan','lopez','1331',313113,13113)
 # print(f"\nDatos del cliente:\n{cliente_1}\n\nDatos de la cuenta:\n{cliente_1.cuenta}\n")
-print(cliente_1.puede_crear_chequera())
-

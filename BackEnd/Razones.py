@@ -23,8 +23,22 @@ class alta_chequera(Razon):
      if cliente.get_tier()=='Classic' or cliente.get_tier()=='CLASSIC':
             self._mensaje=f"Lo sentimos la categoria {cliente.get_tier()}, no permite realizar esta operación"
             print(self._mensaje)
-        
+
+class Compra_dolar(Razon):
+    def resolver(self, cliente, evento):
+        if not cliente.puede_comprar_dolares():
+            self._mensaje="Lo sentimos pero ud. no se encuentra habilitdao para esta operación"
+        elif evento["Monto"]>cliente._cuenta_en_dolares["limite_transferencia_recibida"]:
+            self._mensaje="Ud. ha superado el monto de transferencia a recibir"
+        else:
+            "Lo sentimos no fue posible procesar la transaccion"
 
 
 
-alta_chequera().resolver(cliente_1,"")
+class Retiro_efectivo(Razon):
+    def resolver(self, cliente, evento):
+        if cliente.limite_extraccion_diario<evento["monto"]:
+          self._mensaje="Lo sentimos pero no posee fondos suficientes para realizar esta operacion"
+          print(self._mensaje)
+
+
