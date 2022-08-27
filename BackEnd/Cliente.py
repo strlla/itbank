@@ -22,9 +22,11 @@ class Cliente(Direccion):
         self.__tier__=__tier__.capitalize()
         self.chequeras=0
         self.limite_chequeras=caracteristicas["limite_chequeras"]
-        self.limite_tarjetasCredito=["limite_tajetas_credito"]
+        self.limite_tarjetasCredito=caracteristicas["limite_tajetas_credito"]
         self.limite_extraccion_diario=caracteristicas["caracteristicas_cuenta"]["limite_extraccion_diario"]
         self.tarjetasDebito=0
+        self.limite_transferencia_recibida=caracteristicas["caracteristicas_cuenta"]["limite_transferencia_recibida"]
+        self.saldo_descubierto_disponible=caracteristicas["caracteristicas_cuenta"]["saldo_descubierto_disponible"]
         self._cuenta_en_dolares=caracteristicas["cuenta_en_dolares"]
         self.tarjetas_credito=0
     def puede_comprar_dolares(self):
@@ -33,9 +35,7 @@ class Cliente(Direccion):
         return self.chequeras<=self.limite_chequeras   
 
     def puede_crear_tarjeta_credito(self):
-       return self.limite_tarjetasCredito>self.tarjetas_credito
-    def puede_crear_tarjeta_debito(self):
-        return self.limite_tarjetasDebito>self.tarjetasDebito
+       return self.limite_tarjetasCredito>=self.tarjetas_credito
     def get_tier(self):
         return self.__tier__
     def cantidad_chequeras(self):
@@ -116,5 +116,5 @@ class Black(Cliente):
     def puede_comprar_dolares(self):
          return True
     
-cliente_1=Classic('Juan','lopez','1331',313113,13113)
+cliente_1=Black('Juan','lopez','1331',313113,13113)
 # print(f"\nDatos del cliente:\n{cliente_1}\n\nDatos de la cuenta:\n{cliente_1.cuenta}\n")
