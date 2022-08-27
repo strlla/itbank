@@ -1,16 +1,7 @@
 
 from cmath import inf
 from Direcciones import Direccion
-
-from Productos import Chequera
-from Cuenta import Caja_ahorro_pesos,Caja_ahorro_dolares, Cuenta_corriente
-
-
-from Cuenta import Cuenta
-
-# url='https://raw.githubusercontent.com/strlla/itbank/develop/BackEnd/data/ejemplo_Black.json'
-# data=requests.get(url).json()
-# print(data)
+from Cuenta import *
 class Cliente(Direccion):
  
     def __init__(self,nombre,apellido,direccion,numeroCliente,dni,__tier__,caracteristicas):
@@ -18,7 +9,6 @@ class Cliente(Direccion):
         self.apellido=apellido
         self.numeroCliente=numeroCliente
         self.dni=dni
-        self.direccion=direccion
         self.__tier__=__tier__.capitalize()
         self.chequeras=0
         self.limite_chequeras=caracteristicas["limite_chequeras"]
@@ -29,6 +19,11 @@ class Cliente(Direccion):
         self.saldo_descubierto_disponible=caracteristicas["caracteristicas_cuenta"]["saldo_descubierto_disponible"]
         self._cuenta_en_dolares=caracteristicas["cuenta_en_dolares"]
         self.tarjetas_credito=0
+        if direccion:
+            self._direccion = Direccion(*direccion)
+        else:
+            self._direccion = None
+
     def puede_comprar_dolares(self):
         return False
     def puede_crear_chequera(self):
@@ -116,5 +111,4 @@ class Black(Cliente):
     def puede_comprar_dolares(self):
          return True
     
-cliente_1=Black('Juan','lopez','1331',313113,13113)
-# print(f"\nDatos del cliente:\n{cliente_1}\n\nDatos de la cuenta:\n{cliente_1.cuenta}\n")
+

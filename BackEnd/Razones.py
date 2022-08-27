@@ -69,4 +69,3 @@ class Recibir_transfeerencia(Razon):
      if cliente.limite_transferencia_recibida<evento["monto"]:
         self._mensaje="Lo sentimos pero esta operación supera su monto diario permitido"
         print(self._mensaje)
-
