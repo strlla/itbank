@@ -5,10 +5,6 @@ from Clases.generarRazones import crear_razon
 
 from Clases.Cliente import *
 
-
-
-
-
 def cargar_data(path):
     "  Cargamos el file y generamos cada cliente con su respectiva transaccion"
     with open(path) as file:
@@ -24,9 +20,13 @@ def cargar_data(path):
     return cliente, data['transacciones']
 
 
-
-data=cargar_data('./data/ejemplo_Black.json')
-transacciones = data[1]
-cliente=data[0]
-for transaccion in transacciones:
- crear_razon(cliente,transaccion)
+def main():
+ if __name__ == "__main__":
+   data=cargar_data('./data/ejemplo_Black.json')
+  
+   transacciones = data[1] 
+   cliente=data[0]
+   for transaccion in transacciones:
+       crear_razon(cliente,transaccion)
+  
+main()
