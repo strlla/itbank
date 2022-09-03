@@ -26,4 +26,3 @@ def crear_razon(cliente, transaccion):
     razon.resolver(cliente, transaccion)
     return razon.getMensaje()
 
-
