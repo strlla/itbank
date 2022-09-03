@@ -33,40 +33,113 @@ def generarReporte(cliente,transacciones):
          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <html lang="en">
-        <head>
-                <meta charset="UTF-8">
-                <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+ 
                 <title>Reporte</title>
         </head>
-        <body>
+        <body style="width:80%;justify-content: center; display: grid;">
+        
           <div id="reporte">
                   <h1>Reporte</h1>
                   <h2>Informacion del cliente:</h2>
-                  <div>"""
+                  """
    
     html+=f"""
-     '<p>Nombre:'+ {cliente.nombre}+'</p>'
-        '<p>Apellido:'+ {cliente.apellido}+'</p>'
-        '<p>Direccion:'+ {cliente._direccion}+'</p>'
-        '<p>Numero cliente:'+ {cliente.numeroCliente}+'</p>'
-        '<p>DNI:'+ {cliente.dni}+'</p>'"""
+     <table  >
+    <thead>
+      <tr  >
+        <th  >Nombre</th>
+        <th  >Apellido</th>
+        <th  >DNI</th>
+        <th  >Numero de Cliente</th>
+        <th  >Segmento</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr  >
+        <td  >{cliente.nombre} </td>
+        <td  > {cliente.apellido}</td>
+        <td  >{cliente.dni} </td>
+        <td  >{cliente.numeroCliente}</td>
+        <td  >{cliente.__tier__}</td>
+      </tr>
+
+    </tbody>
+  </table>
+          <table  >
+    <thead>
+      <tr  >
+        <th  >Calle</th>
+        <th  >Numero</th>
+        <th  >Ciudad</th>
+        <th  >Provincia</th>
+        <th  >Pais</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr  >
+        <td  >{cliente._direccion.calle} </td>
+        <td  > {cliente._direccion.numero}</td>
+        <td  >{cliente._direccion.ciudad} </td>
+        <td  >{cliente._direccion.provincia}</td>
+        <td  >{cliente._direccion.pais}</td>
+      </tr>
+
+    </tbody>
+  </table>
+       """
   
   
   
-    html+=""""
-                  </div>
-                  <div> 
-                  
+    html+="""
+  
+    
                   <h2>Transacciones del cliente</h2>
-                  """
+       
+         
+          <table  >
+    <thead>
+      <tr  >
+        <th  >Fecha</th>
+        <th  >Tipo</th>
+        <th  >Estado</th>
+        <th  > Razon</th>
+    
+        
+      </tr>
+      
+    </thead>
+    <tbody>
+               """
          
     for transaccion in transacciones:
            html += f"""
-           <div>
-               <h3>{transaccion['fecha']} {transaccion['tipo']}: {'Aceptada' if transaccion['estado'] == 'ACEPTADA' else 'Rechazada.'}</h3>
-               {'<p>Razón: ' + transaccion["razon"] + '</p>' if transaccion['estado'] == 'RECHAZADA' else ''}
-           </div>
+
+      <tr  >
+        <td style="margin-left:20px;" >{transaccion['fecha']} </td>
+        <td style="margin-left:20px;" > {transaccion['tipo']}</td>
+        <td style="margin-right:20px;font-weight:bold;" >{'Aceptada' if transaccion['estado'] == 'ACEPTADA' else 'Rechazada.'} </td>
+        <td  style="margin-left:20px ;">  -   {transaccion["razon"]}</td>
+
+      </tr>
+"""
+
+    html+="""
+    </tbody>
+  </table>
+
+
+
+
+</div>
+
+
+          
            """
    
     html +=  """
@@ -83,7 +156,7 @@ def main():
   
    transacciones = data[1] 
    cliente=data[0]
-   
+   print(cliente._direccion.calle)
 
    for transaccion in transacciones:
      transaccion["razon"]=crear_razon(cliente,transaccion)

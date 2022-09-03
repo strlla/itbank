@@ -18,7 +18,7 @@ class Cliente():
         self.tarjetas_credito=0
         
         if direccion:
-            self._direccion = Direccion(*direccion)
+            self._direccion = Direccion(*direccion.values())
         else:
             self._direccion = None
 
