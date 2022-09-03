@@ -43,7 +43,7 @@ def generarReporte(cliente,transacciones):
         <body style="width:80%;justify-content: center; display: grid;">
         
           <div id="reporte">
-                  <h1>Reporte</h1>
+                  <h1>Reporte ITBANK</h1>
                   <h2>Informacion del cliente:</h2>
                   """
    
